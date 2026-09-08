@@ -139,3 +139,25 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#8799aa;font-size:1
     transform: none;
   }
 }
+
+
+/* Mobile: keep the fixed navigation from covering the Project Engineer label */
+@media (max-width: 620px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    inset: auto;
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .hero-copy .eyebrow {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+  }
+}
