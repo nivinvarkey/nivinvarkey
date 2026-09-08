@@ -36,3 +36,106 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#8799aa;font-size:1
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
 @media(max-width:900px){.section-pad{padding:80px 0}.nav-links{position:absolute;top:76px;left:0;right:0;padding:24px 20px;background:#081421;border-bottom:1px solid var(--line);display:none;flex-direction:column;gap:18px}.nav-links.open{display:flex}.menu-toggle{display:block}.hero-grid,.about-grid,.skills-grid,.contact-card{grid-template-columns:1fr}.hero-grid{gap:44px}.hero{padding-top:130px}.hero-visual{max-width:620px}.portrait-frame{height:560px}.floating-card{left:15px}.card-grid{grid-template-columns:1fr 1fr}.timeline-item{grid-template-columns:1fr;gap:12px}.section-head{display:block}.section-head p{margin-top:18px}.about-grid{gap:42px}.contact-card{padding:38px}.education-grid{grid-template-columns:1fr}}
 @media(max-width:620px){.container{width:min(calc(100% - 28px),var(--max))}.section-pad{padding:66px 0}h1{font-size:52px}.hero-lead{font-size:17px}.portrait-frame{height:490px;border-radius:22px}.card-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.contact-card{padding:28px}.project-row{grid-template-columns:45px 1fr}.project-row h3{font-size:20px}.hero-actions .btn{width:100%}.ticker-track{font-size:11px}.footer-wrap{flex-direction:column}}
+
+/* Mobile hero/header fixes */
+@media (max-width: 620px) {
+  .site-header {
+    min-height: 68px;
+  }
+
+  .nav-wrap {
+    height: 68px;
+  }
+
+  .nav-links {
+    top: 68px;
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+  }
+
+  .hero {
+    min-height: auto;
+    display: block;
+    padding-top: 108px;
+    padding-bottom: 64px;
+    overflow: visible;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+    align-items: start;
+  }
+
+  .hero-copy {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 11px;
+    line-height: 1.55;
+    letter-spacing: .16em;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 12vw, 52px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+    margin-bottom: 22px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-lead {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    margin: 26px 0;
+  }
+
+  .hero-meta {
+    gap: 8px;
+  }
+
+  .hero-meta span {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: none;
+  }
+
+  .portrait-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .floating-card {
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+    width: auto;
+    padding: 14px 16px;
+  }
+
+  .floating-card strong {
+    font-size: 24px;
+  }
+
+  /* Ensure the above-the-fold content is never hidden if reveal animation
+     is delayed or unsupported on a mobile browser. */
+  .hero .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
