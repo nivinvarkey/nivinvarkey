@@ -31,6 +31,10 @@
     .intro-copy p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.9rem,1.7vw,1.15rem)}
     .intro-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}.intro-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--bio),var(--gold));box-shadow:0 0 18px var(--cyan)}
 
+    /* Intro video loading/error notice */
+    .intro-status{position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);max-width:min(88vw,520px);width:max-content;padding:17px 22px;border:1px solid rgba(99,230,255,.4);border-radius:16px;background:rgba(4,16,26,.9);color:#fff;text-align:center;box-shadow:0 12px 35px #0008;font-size:.94rem}
+    .intro-status[hidden]{display:none}
+    #intro.video-missing .intro-fallback{display:grid}
     /* NAV */
     nav{position:sticky;top:0;z-index:50;background:rgba(5,13,23,.72);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
     .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
@@ -112,7 +116,7 @@
 @media(max-width:650px){.project-grid{grid-template-columns:1fr}.eng-visual{aspect-ratio:4/5}}
 </style></head><body>
 <canvas id="scienceCanvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
-<div id="intro" aria-label="Portfolio welcome"><div class="intro-fallback" aria-hidden="true"><div class="gear">⚙</div></div><video id="welcomeVideo" src="welcome.mp4" autoplay muted playsinline preload="auto"></video><div class="intro-ui"><div class="intro-top"><div class="intro-brand"><div class="intro-mark">NV</div><div>NIVIN VARKEY<small style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">ENGINEERING & FABRICATION</small></div></div><div class="intro-actions"><button class="intro-btn" id="soundBtn">Enable sound</button><button class="intro-btn" id="skipBtn">Skip intro</button></div></div><div class="intro-bottom"><div class="intro-copy"><span>Welcome to my engineering portfolio</span><h1>Engineering precision.<br>Delivering progress.</h1><p>Piping Engineering · Fabrication · Digital Workflows · Abu Dhabi, UAE</p></div><button class="intro-btn" id="enterBtn">Enter portfolio →</button></div></div><div class="intro-progress"><i id="videoProgress"></i></div></div>
+<div id="intro" aria-label="Portfolio welcome"><div class="intro-fallback" aria-hidden="true"><div class="gear">⚙</div></div><video id="welcomeVideo" src="welcome.mp4" autoplay muted playsinline webkit-playsinline preload="auto"></video><div class="intro-ui"><div class="intro-top"><div class="intro-brand"><div class="intro-mark">NV</div><div>NIVIN VARKEY<small style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">ENGINEERING & FABRICATION</small></div></div><div class="intro-actions"><button class="intro-btn" id="soundBtn">Enable sound</button><button class="intro-btn" id="skipBtn">Skip intro</button></div></div><div class="intro-bottom"><div class="intro-copy"><span>Welcome to my engineering portfolio</span><h1>Engineering precision.<br>Delivering progress.</h1><p>Piping Engineering · Fabrication · Digital Workflows · Abu Dhabi, UAE</p></div><button class="intro-btn" id="enterBtn">Enter portfolio →</button></div></div><div class="intro-status" id="introStatus" role="status" aria-live="polite" hidden></div><div class="intro-progress"><i id="videoProgress"></i></div></div>
 <nav><div class="container nav-inner"><a class="brand" href="#home"><span class="brand-logo">NV</span><span>Nivin Varkey<small>Piping Engineering & Fabrication</small></span></a><button class="mobile-toggle" id="menuBtn" aria-label="Open navigation">☰</button><div class="links" id="navLinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact" class="nav-cta">Let's Connect</a></div></div></nav>
 <main><section class="hero" id="home"><div class="container hero-grid"><div class="reveal on"><div class="kicker">Engineering Professional · Abu Dhabi, UAE</div><h1>Nivin<br><em>Varkey</em></h1><div class="role">PROJECT ENGINEERING · PIPING FABRICATION · SHOP COORDINATION</div><p class="hero-copy">Piping engineering and fabrication professional with <strong>9+ years of experience</strong> supporting EPC projects through spool detailing, engineering coordination, document and material control, shop execution, and practical process automation.</p><div class="chip-row"><span class="chip">Team Leadership</span><span class="chip">Pipe Spool Fabrication</span><span class="chip">JD Edwards / JDE</span><span class="chip">Excel, Python & Power Automate</span></div><div class="actions"><a class="btn btn-primary" href="Nivin_Varkey_Project_Engineer_CV.pdf" download>↓ Download CV</a><a class="btn btn-secondary" href="#projects">Explore Projects ↗</a></div><button class="replay" id="replayBtn">↻ Replay introduction</button></div><div class="portrait-zone reveal on"><div class="portrait-orbit"></div><div class="portrait-card"><div class="portrait-media" id="portraitMedia"><div class="eng-visual" aria-label="Engineering piping illustration"><svg viewBox="0 0 500 540" role="img" aria-label="Stylized industrial piping isometric diagram"><defs><linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6edff"/><stop offset="1" stop-color="#1c779e"/></linearGradient></defs><g fill="none" stroke="url(#steel)" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"><path d="M72 370 L188 303 L300 365 L426 289"/><path d="M188 303 L188 172 L299 108 L400 166 L400 232"/><path d="M300 365 L300 445"/><path d="M72 370 L72 276 L136 237"/></g><g fill="none" stroke="#63e6ff" stroke-width="3" opacity=".65"><path d="M54 389 L188 311 L302 374 L445 291"/><path d="M170 172 L297 98 L418 168"/><ellipse cx="300" cy="445" rx="31" ry="15"/><path d="M269 445 V461 A31 15 0 0 0 331 461 V445"/><circle cx="188" cy="303" r="30"/><circle cx="300" cy="365" r="30"/></g><g fill="#63e6ff"><circle cx="72" cy="370" r="6"/><circle cx="426" cy="289" r="6"/><circle cx="188" cy="172" r="6"/></g><g fill="none" stroke="#76e3c7" stroke-width="1.4" stroke-dasharray="6 8" opacity=".55"><path d="M47 445 H450 M48 140 H448 M248 66 V495"/></g></svg><div class="vis-caption">ENGINEERING • PRECISION • DELIVERY</div></div><img class="eng-photo" id="profilePhoto" src="nivin-varkey.jpg" alt="Nivin Varkey" /></div></div><div class="portrait-badge"><b>9+ Years in Engineering</b><small>EPC Piping · Spooling · Fabrication · Coordination</small></div><div class="atom" aria-hidden="true">⚙</div></div></div></section>
 <div class="container stats"><div class="stats-grid glass reveal"><div class="stat"><strong><i>9+</i> Years</strong><span>Piping & fabrication experience</span></div><div class="stat"><strong><i>10</i> Members</strong><span>Engineering support team led</span></div><div class="stat"><strong><i>15+</i> Personnel</strong><span>Shop-floor crew coordinated</span></div><div class="stat"><strong><i>90%</i> Approx.</strong><span>On-time engineering releases</span></div></div></div>
@@ -123,10 +127,83 @@
 <section id="education"><div class="container"><div class="kicker reveal">Qualifications & Tools</div><h2 class="reveal">Engineering foundation</h2><div class="split"><div class="edu-grid"><article class="edu glass reveal"><span class="year">2021</span><h3>B.Tech — Mechanical Engineering</h3><p>AMIIE — Indian Institute of Engineers, Delhi</p></article><article class="edu glass reveal"><span class="year">2016</span><h3>Diploma — Mechanical Engineering</h3><p>Government Polytechnic College, Kerala</p></article></div><div class="reveal"><div class="panel glass"><h3>Engineering & Drafting Software</h3><p>AutoCAD · Isomec · Spoolgen · Autospool · JD Edwards (JDE)</p></div><div class="panel glass" style="margin-top:16px"><h3>Digital & Productivity Tools</h3><p>Advanced Excel/VBA · Python · Power Automate · Microsoft Office</p></div><div class="panel glass" style="margin-top:16px"><h3>Additional Information</h3><p>English · Malayalam · Hindi<br>UAE & India driving licences · UAE employment visa · 30-day notice period</p></div></div></div></div></section>
 <section id="contact"><div class="container contact reveal"><div class="contact-grid"><div><div class="kicker">Connect · Abu Dhabi, UAE</div><h2>Engineering challenges. Practical solutions.</h2><p>Open to professional conversations about piping engineering, project coordination, fabrication, and engineering workflow improvement.</p></div><div class="contact-buttons"><a class="btn btn-primary" href="mailto:nvnivinvarkey@outlook.com">✉ Email Me</a><a class="btn btn-secondary" href="tel:+971589662260">☎ Call</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section></main><footer><div class="container">© 2026 Nivin Varkey · Piping Engineering & Fabrication · Abu Dhabi, UAE<div class="footer-links"><a href="mailto:nvnivinvarkey@outlook.com">nvnivinvarkey@outlook.com</a><a href="tel:+971589662260">+971 58 966 2260</a><a href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
 <script>
-const intro=document.getElementById('intro'),video=document.getElementById('welcomeVideo'),progress=document.getElementById('videoProgress'),soundBtn=document.getElementById('soundBtn');
-let introClosed=false;function closeIntro(){if(introClosed)return;introClosed=true;intro.classList.add('hidden');document.body.style.overflow='';video.pause()}
-function openIntro(){introClosed=false;intro.classList.remove('hidden');document.body.style.overflow='hidden';video.currentTime=0;video.muted=true;soundBtn.textContent='Enable sound';video.play().catch(()=>{intro.classList.add('video-missing')})}
-document.body.style.overflow='hidden';video.addEventListener('playing',()=>intro.classList.add('video-ready'));video.addEventListener('error',()=>{intro.classList.add('video-missing');soundBtn.hidden=true});video.addEventListener('timeupdate',()=>{if(video.duration)progress.style.width=(video.currentTime/video.duration*100)+'%'});video.addEventListener('ended',closeIntro);document.getElementById('skipBtn').onclick=closeIntro;document.getElementById('enterBtn').onclick=closeIntro;document.getElementById('replayBtn').onclick=openIntro;soundBtn.onclick=()=>{video.muted=!video.muted;soundBtn.textContent=video.muted?'Enable sound':'Mute sound';if(video.paused)video.play().catch(()=>{})};
+const intro=document.getElementById('intro');
+const video=document.getElementById('welcomeVideo');
+const progress=document.getElementById('videoProgress');
+const soundBtn=document.getElementById('soundBtn');
+const statusBox=document.getElementById('introStatus');
+let introClosed=false;
+let videoFailed=false;
+function showVideoStatus(message){statusBox.textContent=message;statusBox.hidden=false;}
+function clearVideoStatus(){statusBox.textContent='';statusBox.hidden=true;}
+function closeIntro(){
+  if(introClosed)return;
+  introClosed=true;
+  intro.classList.add('hidden');
+  document.body.style.overflow='';
+  video.pause();
+}
+function failIntro(message){
+  videoFailed=true;
+  intro.classList.add('video-missing');
+  intro.classList.remove('video-ready');
+  soundBtn.hidden=true;
+  showVideoStatus(message+' You can select "Enter portfolio" or "Skip intro" to continue.');
+  document.body.style.overflow='';
+}
+async function playIntro(){
+  clearVideoStatus();
+  intro.classList.remove('video-missing');
+  soundBtn.hidden=false;
+  if(video.error){failIntro('The introduction video could not be loaded. Confirm welcome.mp4 exists in the GitHub repository root and is encoded as H.264 MP4.');return;}
+  try{await video.play();}
+  catch(error){
+    // Mobile browsers and privacy settings can block playback even when muted.
+    showVideoStatus('Autoplay was blocked. Select "Enable sound" to start playback, or enter the portfolio.');
+    console.warn('Introduction video autoplay blocked:',error);
+  }
+}
+function openIntro(){
+  introClosed=false;
+  intro.classList.remove('hidden');
+  document.body.style.overflow='hidden';
+  video.muted=true;
+  soundBtn.textContent='Enable sound';
+  try{video.currentTime=0;}catch(e){}
+  playIntro();
+}
+video.addEventListener('playing',()=>{
+  videoFailed=false;
+  intro.classList.add('video-ready');
+  intro.classList.remove('video-missing');
+  clearVideoStatus();
+});
+video.addEventListener('error',()=>{
+  failIntro('The video failed to load.');
+  console.error('Video error:',video.error,'Video URL:',video.currentSrc);
+});
+video.addEventListener('timeupdate',()=>{
+  if(Number.isFinite(video.duration)&&video.duration>0){
+    progress.style.width=(video.currentTime/video.duration*100)+'%';
+  }
+});
+video.addEventListener('ended',closeIntro);
+document.getElementById('skipBtn').addEventListener('click',closeIntro);
+document.getElementById('enterBtn').addEventListener('click',closeIntro);
+document.getElementById('replayBtn').addEventListener('click',openIntro);
+soundBtn.addEventListener('click',async()=>{
+  if(videoFailed)return;
+  video.muted=!video.muted;
+  soundBtn.textContent=video.muted?'Enable sound':'Mute sound';
+  try{await video.play();clearVideoStatus();}
+  catch(e){showVideoStatus('Playback is unavailable. Confirm welcome.mp4 is uploaded and playable in your browser.');}
+});
+// Start playback explicitly as well as using the autoplay attribute.
+// If the file is absent, the error handler leaves the page accessible.
+document.body.style.overflow='hidden';
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',playIntro,{once:true});
+}else{playIntro();}
 const photo=document.getElementById('profilePhoto');photo.addEventListener('load',()=>document.getElementById('portraitMedia').classList.add('has-photo'));photo.addEventListener('error',()=>{});if(photo.complete&&photo.naturalWidth)document.getElementById('portraitMedia').classList.add('has-photo');
 const menu=document.getElementById('navLinks');document.getElementById('menuBtn').onclick=()=>menu.classList.toggle('open');[...menu.querySelectorAll('a')].forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on'));
