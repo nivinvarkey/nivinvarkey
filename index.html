@@ -1,213 +1,1789 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071626"><meta name="description" content="Nivin Varkey — Piping Engineering, Fabrication and Engineering Coordination professional with 9+ years of experience in Abu Dhabi, UAE."><meta property="og:title" content="Nivin Varkey | Piping Engineering & Fabrication"><meta property="og:description" content="Engineering coordination, pipe spool fabrication, and workflow automation in Abu Dhabi, UAE."><title>Nivin Varkey | Engineering & Fabrication Portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>
-    :root{
-      --bg:#050d17;--bg2:#071626;--panel:rgba(11,28,46,.72);--panel2:rgba(13,36,57,.82);
-      --text:#eef7ff;--muted:#9bb0c3;--cyan:#63e6ff;--cyan2:#1bb8e8;--bio:#80cdbb;
-      --gold:#f2c66d;--line:rgba(135,202,228,.18);--shadow:0 22px 70px rgba(0,0,0,.38);
-      --max:1180px;
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071626">
+  <meta name="description"
+    content="Nivin Varkey — Piping Engineering, Fabrication and Engineering Coordination professional with 9+ years of experience in Abu Dhabi, UAE.">
+  <meta property="og:title" content="Nivin Varkey | Piping Engineering & Fabrication">
+  <meta property="og:description"
+    content="Engineering coordination, pipe spool fabrication, and workflow automation in Abu Dhabi, UAE.">
+  <title>Nivin Varkey | Engineering & Fabrication Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050d17;
+      --bg2: #071626;
+      --panel: rgba(11, 28, 46, .72);
+      --panel2: rgba(13, 36, 57, .82);
+      --text: #eef7ff;
+      --muted: #9bb0c3;
+      --cyan: #63e6ff;
+      --cyan2: #1bb8e8;
+      --bio: #80cdbb;
+      --gold: #f2c66d;
+      --line: rgba(135, 202, 228, .18);
+      --shadow: 0 22px 70px rgba(0, 0, 0, .38);
+      --max: 1180px;
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:86px}
-    body{margin:0;background:radial-gradient(circle at 75% 10%,rgba(25,124,165,.12),transparent 34%),linear-gradient(180deg,#050d17,#071626 42%,#06101d);color:var(--text);font:500 16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
-    a{color:inherit;text-decoration:none} button{font:inherit} img{max-width:100%;display:block}
-    ::selection{background:var(--cyan);color:#002232}
-    #scienceCanvas{position:fixed;inset:0;z-index:-2;width:100%;height:100%;opacity:.72}
-    .noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
-    .container{width:min(calc(100% - 38px),var(--max));margin:auto}
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 75% 10%, rgba(25, 124, 165, .12), transparent 34%), linear-gradient(180deg, #050d17, #071626 42%, #06101d);
+      color: var(--text);
+      font: 500 16px/1.65 Inter, system-ui, sans-serif;
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    ::selection {
+      background: var(--cyan);
+      color: #002232
+    }
+
+    #scienceCanvas {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      opacity: .72
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")
+    }
+
+    .container {
+      width: min(calc(100% - 38px), var(--max));
+      margin: auto
+    }
 
     /* INTRO VIDEO */
-    #intro{position:fixed;inset:0;z-index:1000;background:#03070c;display:grid;place-items:center;transition:opacity .75s ease,visibility .75s ease}
-    #intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    #intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    #intro:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,9,16,.12),rgba(3,9,16,.06) 48%,rgba(3,9,16,.75))}
-    .intro-ui{position:relative;z-index:2;width:min(92%,1120px);height:min(88vh,760px);display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
-    .intro-top,.intro-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:auto}
-    .intro-brand{display:flex;align-items:center;gap:13px;color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.04em;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-    .intro-mark{width:47px;height:47px;border:1px solid rgba(99,230,255,.7);border-radius:14px;display:grid;place-items:center;background:rgba(4,18,29,.34);backdrop-filter:blur(12px);box-shadow:0 0 30px rgba(99,230,255,.18)}
-    .intro-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .intro-btn{border:1px solid rgba(255,255,255,.38);background:rgba(4,16,26,.42);color:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;backdrop-filter:blur(10px);transition:.2s}
-    .intro-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-    .intro-copy{max-width:720px;text-shadow:0 3px 22px rgba(0,0,0,.65)}
-    .intro-copy span{display:inline-block;color:var(--cyan);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.77rem;margin-bottom:8px}
-    .intro-copy h1{margin:0 0 8px;font:700 clamp(2.2rem,6vw,5.6rem)/.95 "Space Grotesk",sans-serif;letter-spacing:-.055em}
-    .intro-copy p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.9rem,1.7vw,1.15rem)}
-    .intro-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:3}.intro-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--bio),var(--gold));box-shadow:0 0 18px var(--cyan)}
+    #intro {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: #03070c;
+      display: grid;
+      place-items: center;
+      transition: opacity .75s ease, visibility .75s ease
+    }
+
+    #intro.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    #intro video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    #intro:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(3, 9, 16, .12), rgba(3, 9, 16, .06) 48%, rgba(3, 9, 16, .75))
+    }
+
+    .intro-ui {
+      position: relative;
+      z-index: 2;
+      width: min(92%, 1120px);
+      height: min(88vh, 760px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: none
+    }
+
+    .intro-top,
+    .intro-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: auto
+    }
+
+    .intro-brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: #fff;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, .5)
+    }
+
+    .intro-mark {
+      width: 47px;
+      height: 47px;
+      border: 1px solid rgba(99, 230, 255, .7);
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(4, 18, 29, .34);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(99, 230, 255, .18)
+    }
+
+    .intro-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .intro-btn {
+      border: 1px solid rgba(255, 255, 255, .38);
+      background: rgba(4, 16, 26, .42);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: .2s
+    }
+
+    .intro-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan)
+    }
+
+    .intro-copy {
+      max-width: 720px;
+      text-shadow: 0 3px 22px rgba(0, 0, 0, .65)
+    }
+
+    .intro-copy span {
+      display: inline-block;
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .77rem;
+      margin-bottom: 8px
+    }
+
+    .intro-copy h1 {
+      margin: 0 0 8px;
+      font: 700 clamp(2.2rem, 6vw, 5.6rem)/.95 "Space Grotesk", sans-serif;
+      letter-spacing: -.055em
+    }
+
+    .intro-copy p {
+      margin: 0;
+      color: rgba(255, 255, 255, .82);
+      font-size: clamp(.9rem, 1.7vw, 1.15rem)
+    }
+
+    .intro-progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: rgba(255, 255, 255, .16);
+      z-index: 3
+    }
+
+    .intro-progress i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--cyan), var(--bio), var(--gold));
+      box-shadow: 0 0 18px var(--cyan)
+    }
 
     /* Intro video loading/error notice */
-    .intro-status{position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);max-width:min(88vw,520px);width:max-content;padding:17px 22px;border:1px solid rgba(99,230,255,.4);border-radius:16px;background:rgba(4,16,26,.9);color:#fff;text-align:center;box-shadow:0 12px 35px #0008;font-size:.94rem}
-    .intro-status[hidden]{display:none}
-    #intro.video-missing .intro-fallback{display:grid}
-    /* NAV */
-    nav{position:sticky;top:0;z-index:50;background:rgba(5,13,23,.72);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
-    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-weight:700}
-    .brand-logo{width:42px;height:42px;border-radius:13px;border:1px solid rgba(99,230,255,.55);display:grid;place-items:center;color:var(--cyan);background:linear-gradient(145deg,rgba(99,230,255,.12),rgba(115,230,164,.05));box-shadow:0 0 24px rgba(99,230,255,.09)}
-    .brand small{display:block;color:var(--muted);font:500 .71rem Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
-    .links{display:flex;align-items:center;gap:26px;color:#bfd0de;font-size:.91rem}.links a{position:relative}.links a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--cyan);transition:.22s}.links a:hover:after{right:0}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:11px 17px;font-weight:800;border:1px solid transparent;transition:.22s;cursor:pointer}
-    .nav-cta{border-color:rgba(99,230,255,.45);color:var(--cyan);background:rgba(99,230,255,.06)}
-    .nav-cta:hover{background:var(--cyan);color:#02202d;box-shadow:0 0 26px rgba(99,230,255,.3)}
-    .mobile-toggle{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
+    .intro-status {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: min(88vw, 520px);
+      width: max-content;
+      padding: 17px 22px;
+      border: 1px solid rgba(99, 230, 255, .4);
+      border-radius: 16px;
+      background: rgba(4, 16, 26, .9);
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 12px 35px #0008;
+      font-size: .94rem
+    }
 
-    section{padding:96px 0}.kicker{display:flex;align-items:center;gap:10px;color:var(--cyan);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.2em;margin-bottom:12px}.kicker:before{content:"";width:30px;height:1px;background:var(--cyan)}
-    h2{font:700 clamp(2.1rem,4vw,3.5rem)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:0 0 18px} .muted{color:var(--muted)}
-    .glass{background:linear-gradient(145deg,rgba(12,31,50,.76),rgba(6,20,34,.68));border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(16px)}
+    .intro-status[hidden] {
+      display: none
+    }
+
+    #intro.video-missing .intro-fallback {
+      display: grid
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 13, 23, .72);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px)
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      border: 1px solid rgba(99, 230, 255, .55);
+      display: grid;
+      place-items: center;
+      color: var(--cyan);
+      background: linear-gradient(145deg, rgba(99, 230, 255, .12), rgba(115, 230, 164, .05));
+      box-shadow: 0 0 24px rgba(99, 230, 255, .09)
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font: 500 .71rem Inter, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 1px
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #bfd0de;
+      font-size: .91rem
+    }
+
+    .links a {
+      position: relative
+    }
+
+    .links a:not(.nav-cta):after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -8px;
+      height: 2px;
+      background: var(--cyan);
+      transition: .22s
+    }
+
+    .links a:hover:after {
+      right: 0
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      padding: 11px 17px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .22s;
+      cursor: pointer
+    }
+
+    .nav-cta {
+      border-color: rgba(99, 230, 255, .45);
+      color: var(--cyan);
+      background: rgba(99, 230, 255, .06)
+    }
+
+    .nav-cta:hover {
+      background: var(--cyan);
+      color: #02202d;
+      box-shadow: 0 0 26px rgba(99, 230, 255, .3)
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer
+    }
+
+    section {
+      padding: 96px 0
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--cyan);
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      margin-bottom: 12px
+    }
+
+    .kicker:before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--cyan)
+    }
+
+    h2 {
+      font: 700 clamp(2.1rem, 4vw, 3.5rem)/1.05 "Space Grotesk", sans-serif;
+      letter-spacing: -.04em;
+      margin: 0 0 18px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .glass {
+      background: linear-gradient(145deg, rgba(12, 31, 50, .76), rgba(6, 20, 34, .68));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px)
+    }
 
     /* HERO */
-    .hero{min-height:calc(100vh - 78px);display:flex;align-items:center;padding:64px 0 76px;position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;right:-10%;top:5%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.11),transparent 65%);filter:blur(4px);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:66px;align-items:center}
-    .hero h1{margin:0 0 15px;font:700 clamp(3.1rem,7vw,6.7rem)/.88 "Space Grotesk",sans-serif;letter-spacing:-.065em}
-    .hero h1 em{font-style:normal;color:transparent;background:linear-gradient(95deg,var(--cyan),#b9f5ff 47%,var(--bio));background-clip:text;-webkit-background-clip:text}
-    .role{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.84rem;font-weight:800;margin-bottom:22px}
-    .hero-copy{font-size:1.08rem;color:#b6c8d6;max-width:680px;margin:0 0 25px}
-    .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 29px}.chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(115,230,164,.28);background:rgba(115,230,164,.06);color:#b8f6d1;font-size:.83rem}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn-primary{background:linear-gradient(100deg,var(--gold),#ffd98b);color:#201604}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(242,198,109,.2)}.btn-secondary{border-color:rgba(99,230,255,.38);color:var(--cyan);background:rgba(99,230,255,.04)}.btn-secondary:hover{background:rgba(99,230,255,.11);transform:translateY(-2px)}
-    .replay{margin-top:18px;border:0;background:none;color:#7f99ac;cursor:pointer;padding:0}.replay:hover{color:var(--cyan)}
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      padding: 64px 0 76px;
+      position: relative;
+      overflow: hidden
+    }
 
-    .portrait-zone{position:relative;min-height:610px;display:grid;place-items:center}
-    .portrait-orbit{position:absolute;width:510px;height:510px;border:1px solid rgba(99,230,255,.18);border-radius:50%;animation:spin 28s linear infinite}.portrait-orbit:before,.portrait-orbit:after{content:"";position:absolute;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}.portrait-orbit:before{width:8px;height:8px;left:50%;top:-4px}.portrait-orbit:after{width:6px;height:6px;right:12%;bottom:9%;background:var(--bio);box-shadow:0 0 14px var(--bio)}@keyframes spin{to{transform:rotate(360deg)}}
-    .portrait-card{position:relative;width:min(430px,90%);border-radius:38px;padding:13px;background:linear-gradient(145deg,rgba(120,224,255,.17),rgba(7,22,36,.55));border:1px solid rgba(99,230,255,.28);box-shadow:0 30px 90px rgba(0,0,0,.46),0 0 55px rgba(99,230,255,.08)}
-    .portrait-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:saturate(.94) contrast(1.03)}
+    .hero:before {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: 5%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 230, 255, .11), transparent 65%);
+      filter: blur(4px);
+      pointer-events: none
+    }
 
-    /* PORTRAIT VIDEO -> PHOTO */
-    .portrait-media{position:relative;width:100%;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#06121e}
-    .portrait-media video,.portrait-media img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;border-radius:28px;transition:opacity .8s ease}
-    .portrait-media video{z-index:1;opacity:1}
-    .portrait-media img{z-index:0;opacity:1}
-    .portrait-media.show-photo video{opacity:0}
-    .pv-sound{position:absolute;z-index:3;right:12px;bottom:12px;border:1px solid rgba(255,255,255,.4);background:rgba(4,16,26,.62);color:#fff;padding:8px 13px;border-radius:999px;font-size:.8rem;font-weight:700;cursor:pointer;backdrop-filter:blur(10px);transition:opacity .4s,border-color .2s,color .2s}
-    .pv-sound:hover{border-color:var(--cyan);color:var(--cyan)}
-    .portrait-media.show-photo .pv-sound{opacity:0;pointer-events:none}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 66px;
+      align-items: center
+    }
 
-    .portrait-badge{position:absolute;left:-40px;bottom:55px;padding:15px 17px;border-radius:18px;background:rgba(5,22,36,.88);border:1px solid rgba(115,230,164,.32);box-shadow:var(--shadow);backdrop-filter:blur(12px);max-width:215px}.portrait-badge b{display:block;color:var(--bio);font-family:"Space Grotesk"}.portrait-badge small{color:#a8bbc9}
-    .atom{position:absolute;right:-18px;top:62px;width:112px;height:112px;border-radius:50%;border:1px solid rgba(99,230,255,.23);display:grid;place-items:center;color:var(--cyan);font-size:2rem;background:rgba(7,25,40,.55);box-shadow:0 0 45px rgba(99,230,255,.11);backdrop-filter:blur(12px)}
+    .hero h1 {
+      margin: 0 0 15px;
+      font: 700 clamp(3.1rem, 7vw, 6.7rem)/.88 "Space Grotesk", sans-serif;
+      letter-spacing: -.065em
+    }
 
-    .stats{margin-top:-38px;position:relative;z-index:5}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-radius:24px;overflow:hidden}.stat{padding:23px 24px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat strong{display:block;font:700 1.35rem "Space Grotesk";color:#fff}.stat span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}.stat i{font-style:normal;color:var(--cyan);margin-right:7px}
+    .hero h1 em {
+      font-style: normal;
+      color: transparent;
+      background: linear-gradient(95deg, var(--cyan), #b9f5ff 47%, var(--bio));
+      background-clip: text;
+      -webkit-background-clip: text
+    }
+
+    .role {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .84rem;
+      font-weight: 800;
+      margin-bottom: 22px
+    }
+
+    .hero-copy {
+      font-size: 1.08rem;
+      color: #b6c8d6;
+      max-width: 680px;
+      margin: 0 0 25px
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0 0 29px
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(115, 230, 164, .28);
+      background: rgba(115, 230, 164, .06);
+      color: #b8f6d1;
+      font-size: .83rem
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      background: linear-gradient(100deg, var(--gold), #ffd98b);
+      color: #201604
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(242, 198, 109, .2)
+    }
+
+    .btn-secondary {
+      border-color: rgba(99, 230, 255, .38);
+      color: var(--cyan);
+      background: rgba(99, 230, 255, .04)
+    }
+
+    .btn-secondary:hover {
+      background: rgba(99, 230, 255, .11);
+      transform: translateY(-2px)
+    }
+
+    .replay {
+      margin-top: 18px;
+      border: 0;
+      background: none;
+      color: #7f99ac;
+      cursor: pointer;
+      padding: 0
+    }
+
+    .replay:hover {
+      color: var(--cyan)
+    }
+
+    .portrait-zone {
+      position: relative;
+      min-height: 610px;
+      display: grid;
+      place-items: center
+    }
+
+    .portrait-orbit {
+      position: absolute;
+      width: 510px;
+      height: 510px;
+      border: 1px solid rgba(99, 230, 255, .18);
+      border-radius: 50%;
+      animation: spin 28s linear infinite
+    }
+
+    .portrait-orbit:before,
+    .portrait-orbit:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan)
+    }
+
+    .portrait-orbit:before {
+      width: 8px;
+      height: 8px;
+      left: 50%;
+      top: -4px
+    }
+
+    .portrait-orbit:after {
+      width: 6px;
+      height: 6px;
+      right: 12%;
+      bottom: 9%;
+      background: var(--bio);
+      box-shadow: 0 0 14px var(--bio)
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .portrait-card {
+      position: relative;
+      width: min(430px, 90%);
+      border-radius: 38px;
+      padding: 13px;
+      background: linear-gradient(145deg, rgba(120, 224, 255, .17), rgba(7, 22, 36, .55));
+      border: 1px solid rgba(99, 230, 255, .28);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .46), 0 0 55px rgba(99, 230, 255, .08)
+    }
+
+    .portrait-card img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 28px;
+      filter: saturate(.94) contrast(1.03)
+    }
+
+    /* PROFILE PHOTO WITH ENGINEERING ILLUSTRATION FALLBACK */
+    .portrait-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #06121e;
+    }
+
+    .portrait-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+
+    .portrait-badge {
+      position: absolute;
+      left: -40px;
+      bottom: 55px;
+      padding: 15px 17px;
+      border-radius: 18px;
+      background: rgba(5, 22, 36, .88);
+      border: 1px solid rgba(115, 230, 164, .32);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      max-width: 215px
+    }
+
+    .portrait-badge b {
+      display: block;
+      color: var(--bio);
+      font-family: "Space Grotesk"
+    }
+
+    .portrait-badge small {
+      color: #a8bbc9
+    }
+
+    .atom {
+      position: absolute;
+      right: -18px;
+      top: 62px;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      border: 1px solid rgba(99, 230, 255, .23);
+      display: grid;
+      place-items: center;
+      color: var(--cyan);
+      font-size: 2rem;
+      background: rgba(7, 25, 40, .55);
+      box-shadow: 0 0 45px rgba(99, 230, 255, .11);
+      backdrop-filter: blur(12px)
+    }
+
+    .stats {
+      margin-top: -38px;
+      position: relative;
+      z-index: 5
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-radius: 24px;
+      overflow: hidden
+    }
+
+    .stat {
+      padding: 23px 24px;
+      border-right: 1px solid var(--line)
+    }
+
+    .stat:last-child {
+      border-right: 0
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 1.35rem "Space Grotesk";
+      color: #fff
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 4px
+    }
+
+    .stat i {
+      font-style: normal;
+      color: var(--cyan);
+      margin-right: 7px
+    }
 
     /* CONTENT */
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.panel{border-radius:24px;padding:29px}.panel h3{font:700 1.15rem "Space Grotesk";margin:0 0 9px}.panel p{color:#afc1cf;margin:0}
-    .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.fit{border-radius:18px;padding:18px;background:rgba(9,28,45,.6);border:1px solid var(--line)}.fit b{display:block;color:#fff;margin-bottom:5px}.fit small{color:var(--muted)}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{border-radius:21px;padding:22px;min-height:176px;position:relative;overflow:hidden}.skill:after{content:"";position:absolute;width:110px;height:110px;right:-45px;bottom:-45px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.13),transparent 68%)}.skill-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(99,230,255,.08);border:1px solid rgba(99,230,255,.2);font-size:1.25rem;margin-bottom:14px}.skill h3{font:700 1.02rem "Space Grotesk";margin:0 0 7px}.skill p{font-size:.9rem;color:var(--muted);margin:0}
-    .timeline{display:grid;gap:18px}.job{display:grid;grid-template-columns:175px 1fr;gap:27px;border-radius:22px;padding:25px}.job-date{font-size:.82rem;color:var(--cyan);font-weight:800;letter-spacing:.06em}.job h3{font:700 1.12rem "Space Grotesk";margin:0 0 5px}.job-org{color:var(--gold);font-size:.9rem;margin-bottom:10px}.job ul{margin:0;padding-left:18px;color:#aebfcc;font-size:.93rem}.job li+li{margin-top:5px}
-    .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.edu{border-radius:21px;padding:23px}.edu .year{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.08em}.edu h3{font:700 1.06rem "Space Grotesk";margin:5px 0 3px}.edu p{margin:0;color:var(--muted);font-size:.9rem}.edu .score{color:var(--bio);font-weight:800;margin-top:8px;display:block;font-size:.86rem}
-    .cred-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cred{border-radius:20px;padding:22px;background:linear-gradient(145deg,rgba(115,230,164,.08),rgba(12,31,50,.64));border:1px solid rgba(115,230,164,.22)}.cred strong{display:block;font:700 1.15rem "Space Grotesk";color:#d7ffe6}.cred span{font-size:.87rem;color:var(--muted)}
-    .activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.activity{border-radius:20px;padding:21px}.activity time{color:var(--gold);font-size:.77rem;font-weight:800}.activity h3{font:700 1rem "Space Grotesk";margin:7px 0 3px}.activity p{margin:0;color:var(--muted);font-size:.88rem}
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start
+    }
 
-    .contact{border-radius:30px;padding:42px;background:linear-gradient(120deg,rgba(9,42,64,.94),rgba(7,26,44,.94));border:1px solid rgba(99,230,255,.24);position:relative;overflow:hidden}.contact:after{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,230,255,.15),transparent 65%)}.contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.contact p{color:#b3c4d1;max-width:650px}.contact-buttons{display:flex;gap:11px;justify-content:flex-end;flex-wrap:wrap}
-    footer{padding:29px 0 45px;color:#7890a3;font-size:.86rem;text-align:center}.footer-links{margin-top:8px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
-    .reveal{opacity:0;transform:translateY(20px);transition:.65s ease}.reveal.on{opacity:1;transform:none}
+    .panel {
+      border-radius: 24px;
+      padding: 29px
+    }
 
-    @media(max-width:980px){.links{display:none}.links.open{display:flex;position:absolute;left:18px;right:18px;top:70px;background:rgba(5,13,23,.97);border:1px solid var(--line);border-radius:20px;padding:20px;flex-direction:column;align-items:stretch}.mobile-toggle{display:block}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero{padding-top:45px}.portrait-zone{min-height:520px}.stats{margin-top:0}.stats-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.skills{grid-template-columns:1fr 1fr}.contact-buttons{justify-content:flex-start}.portrait-badge{left:0}}
-    @media(max-width:650px){section{padding:72px 0}.container{width:min(calc(100% - 28px),var(--max))}.hero h1{font-size:3.5rem}.portrait-zone{min-height:440px}.portrait-orbit{width:380px;height:380px}.portrait-card{width:320px}.atom{right:0;top:35px;width:80px;height:80px}.portrait-badge{bottom:20px;max-width:180px}.stats-grid,.skills,.edu-grid,.cred-row,.activity-grid,.fit-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}.job{grid-template-columns:1fr;gap:7px}.contact{padding:28px}.intro-ui{height:90vh}.intro-bottom{align-items:flex-end}.intro-copy h1{font-size:3.2rem}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portrait-orbit{animation:none}.reveal{transition:none}}
-  
-/* Engineering portfolio refinements */
-.eng-badge{font-size:3.1rem;color:var(--cyan);font-weight:800;letter-spacing:-.12em;line-height:1}
-.eng-visual{width:100%;aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(circle at 50% 40%,rgba(35,139,172,.20),transparent 56%),linear-gradient(145deg,#0c2b43,#06121f)}
-.eng-visual svg{width:85%;height:auto;filter:drop-shadow(0 0 25px rgba(99,230,255,.25))}.eng-visual .vis-caption{position:absolute;bottom:25px;left:20px;right:20px;text-align:center;font-size:.76rem;letter-spacing:.19em;color:#a8dae8;font-weight:800}
-.eng-photo{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
-.portrait-media.has-photo .eng-photo{display:block}
-.portrait-media.has-photo .eng-visual{display:none}
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{padding:24px;border-radius:22px}.project .tag{color:var(--cyan);font-weight:800;letter-spacing:.08em;font-size:.75rem}.project h3{font:700 1.08rem 'Space Grotesk';margin:12px 0 9px}.project p{font-size:.9rem;color:var(--muted);margin:0}
-.intro-fallback{position:absolute;inset:0;background:radial-gradient(circle at 65% 40%,rgba(35,136,181,.25),transparent 45%),linear-gradient(135deg,#071626,#020811);display:grid;place-items:center}.intro-fallback .gear{font-size:clamp(8rem,27vw,19rem);opacity:.13;color:var(--cyan);animation:spin 35s linear infinite}
-#intro:has(video:not([src])) .intro-fallback{display:grid}
-#intro.video-ready .intro-fallback{display:none}
-#intro.video-missing .intro-progress{display:none}
-@media(max-width:980px){.project-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.project-grid{grid-template-columns:1fr}.eng-visual{aspect-ratio:4/5}}
-</style></head><body>
-<canvas id="scienceCanvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
-<div id="intro" aria-label="Portfolio welcome"><div class="intro-fallback" aria-hidden="true"><div class="gear">⚙</div></div><video id="welcomeVideo" src="welcome.mp4" autoplay muted playsinline webkit-playsinline preload="auto"></video><div class="intro-ui"><div class="intro-top"><div class="intro-brand"><div class="intro-mark">NV</div><div>NIVIN VARKEY<small style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">ENGINEERING & FABRICATION</small></div></div><div class="intro-actions"><button class="intro-btn" id="soundBtn">Enable sound</button><button class="intro-btn" id="skipBtn">Skip intro</button></div></div><div class="intro-bottom"><div class="intro-copy"><span>Welcome to my engineering portfolio</span><h1>Engineering precision.<br>Delivering progress.</h1><p>Piping Engineering · Fabrication · Digital Workflows · Abu Dhabi, UAE</p></div><button class="intro-btn" id="enterBtn">Enter portfolio →</button></div></div><div class="intro-status" id="introStatus" role="status" aria-live="polite" hidden></div><div class="intro-progress"><i id="videoProgress"></i></div></div>
-<nav><div class="container nav-inner"><a class="brand" href="#home"><span class="brand-logo">NV</span><span>Nivin Varkey<small>Piping Engineering & Fabrication</small></span></a><button class="mobile-toggle" id="menuBtn" aria-label="Open navigation">☰</button><div class="links" id="navLinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact" class="nav-cta">Let's Connect</a></div></div></nav>
-<main><section class="hero" id="home"><div class="container hero-grid"><div class="reveal on"><div class="kicker">Engineering Professional · Abu Dhabi, UAE</div><h1>Nivin<br><em>Varkey</em></h1><div class="role">PROJECT ENGINEERING · PIPING FABRICATION · SHOP COORDINATION</div><p class="hero-copy">Piping engineering and fabrication professional with <strong>9+ years of experience</strong> supporting EPC projects through spool detailing, engineering coordination, document and material control, shop execution, and practical process automation.</p><div class="chip-row"><span class="chip">Team Leadership</span><span class="chip">Pipe Spool Fabrication</span><span class="chip">JD Edwards / JDE</span><span class="chip">Excel, Python & Power Automate</span></div><div class="actions"><a class="btn btn-primary" href="Nivin_Varkey_Project_Engineer_CV.pdf" download>↓ Download CV</a><a class="btn btn-secondary" href="#projects">Explore Projects ↗</a></div><button class="replay" id="replayBtn">↻ Replay introduction</button></div><div class="portrait-zone reveal on"><div class="portrait-orbit"></div><div class="portrait-card"><div class="portrait-media" id="portraitMedia"><div class="eng-visual" aria-label="Engineering piping illustration"><svg viewBox="0 0 500 540" role="img" aria-label="Stylized industrial piping isometric diagram"><defs><linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6edff"/><stop offset="1" stop-color="#1c779e"/></linearGradient></defs><g fill="none" stroke="url(#steel)" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"><path d="M72 370 L188 303 L300 365 L426 289"/><path d="M188 303 L188 172 L299 108 L400 166 L400 232"/><path d="M300 365 L300 445"/><path d="M72 370 L72 276 L136 237"/></g><g fill="none" stroke="#63e6ff" stroke-width="3" opacity=".65"><path d="M54 389 L188 311 L302 374 L445 291"/><path d="M170 172 L297 98 L418 168"/><ellipse cx="300" cy="445" rx="31" ry="15"/><path d="M269 445 V461 A31 15 0 0 0 331 461 V445"/><circle cx="188" cy="303" r="30"/><circle cx="300" cy="365" r="30"/></g><g fill="#63e6ff"><circle cx="72" cy="370" r="6"/><circle cx="426" cy="289" r="6"/><circle cx="188" cy="172" r="6"/></g><g fill="none" stroke="#76e3c7" stroke-width="1.4" stroke-dasharray="6 8" opacity=".55"><path d="M47 445 H450 M48 140 H448 M248 66 V495"/></g></svg><div class="vis-caption">ENGINEERING • PRECISION • DELIVERY</div></div><img class="eng-photo" id="profilePhoto" src="nivin-varkey.jpg" alt="Nivin Varkey" /></div></div><div class="portrait-badge"><b>9+ Years in Engineering</b><small>EPC Piping · Spooling · Fabrication · Coordination</small></div><div class="atom" aria-hidden="true">⚙</div></div></div></section>
-<div class="container stats"><div class="stats-grid glass reveal"><div class="stat"><strong><i>9+</i> Years</strong><span>Piping & fabrication experience</span></div><div class="stat"><strong><i>10</i> Members</strong><span>Engineering support team led</span></div><div class="stat"><strong><i>15+</i> Personnel</strong><span>Shop-floor crew coordinated</span></div><div class="stat"><strong><i>90%</i> Approx.</strong><span>On-time engineering releases</span></div></div></div>
-<section id="about"><div class="container split"><div class="reveal"><div class="kicker">About Me</div><h2>Connecting engineering intent with fabrication execution.</h2><p class="muted">I combine engineering document control, pipe spool detailing, fabrication support, and shop coordination to keep technical information accurate and production-ready. My work includes resolving drawing and BOM discrepancies, managing revisions, supporting materials flow, and coordinating with engineering, procurement, fabrication, and QA/QC teams.</p></div><div class="fit-grid reveal"><div class="fit"><b>Engineering Coordination</b><small>Concurrent EPC projects, drawing reviews, revision control, and technical clarifications.</small></div><div class="fit"><b>Fabrication Operations</b><small>Spool releases, fit-up, hydro-testing, erection, and dispatch support.</small></div><div class="fit"><b>Materials & Traceability</b><small>BOM validation, JDE processing, material workflows, controlled records.</small></div><div class="fit"><b>Engineering Automation</b><small>Excel/VBA, Python, and Power Automate for reporting and repetitive workflows.</small></div></div></div></section>
-<section id="expertise"><div class="container"><div class="kicker reveal">Core Capabilities</div><h2 class="reveal">Technical and operational expertise</h2><div class="skills"><article class="skill glass reveal"><div class="skill-icon">⚙</div><h3>Pipe Spool Detailing</h3><p>Isometric interpretation, fabrication drawings, Spoolgen, Autospool, AutoCAD, PCF/IDF and IPMF files.</p></article><article class="skill glass reveal"><div class="skill-icon">📐</div><h3>Engineering Review</h3><p>Client specifications, drawing revisions, technical queries, controlled releases, ASME and ASTM requirements.</p></article><article class="skill glass reveal"><div class="skill-icon">🏭</div><h3>Shop Coordination</h3><p>Fit-up, welding operations, hydro-testing, installation interfaces, schedules and shipping support.</p></article><article class="skill glass reveal"><div class="skill-icon">📦</div><h3>BOM & Material Control</h3><p>JD Edwards BOM validation, purchase requisitions, material traceability, and release package coordination.</p></article><article class="skill glass reveal"><div class="skill-icon">👥</div><h3>Team Leadership</h3><p>Work allocation, team coaching, document/material control supervision and process improvements.</p></article><article class="skill glass reveal"><div class="skill-icon">💻</div><h3>Workflow Automation</h3><p>Advanced Excel/VBA, Python, Power Automate and engineering reporting improvements.</p></article></div></div></section>
-<section id="experience"><div class="container"><div class="kicker reveal">Career Journey</div><h2 class="reveal">Professional experience</h2><div class="timeline"><article class="job glass reveal"><div class="job-date">DEC 2022 — PRESENT</div><div><h3>Team Lead — Piping (Engineering Department)</h3><div class="job-org">EPIC Piping International · Abu Dhabi, UAE</div><ul><li>Lead a 10-member document and material control team supporting simultaneous piping fabrication projects.</li><li>Coordinate engineering releases, revisions, BOM/JDE validation, material requirements and technical discrepancy resolution.</li><li>Maintain approximately 90% on-time engineering release performance through prioritization and process control.</li><li>Work across engineering, procurement, fabrication and quality teams, with traceable project records.</li></ul></div></article><article class="job glass reveal"><div class="job-date">NOV 2019 — DEC 2022</div><div><h3>Piping Detailer / Drafter</h3><div class="job-org">EPIC Piping International · Abu Dhabi, UAE</div><ul><li>Produced pipe spool fabrication drawings from client isometrics using Spoolgen, Autospool and AutoCAD.</li><li>Incorporated client revisions and maintained controlled spool packages.</li><li>Corrected IPMF and missing or corrupted PCF/IDF data to reduce detailing delays and production holds.</li></ul></div></article><article class="job glass reveal"><div class="job-date">JUN 2017 — NOV 2019</div><div><h3>Shop Coordinator</h3><div class="job-org">Penta Global Engineering · Abu Dhabi, UAE</div><ul><li>Coordinated daily activities of 15+ fabrication personnel, including welders, fitters, tackers and hydro-test staff.</li><li>Supported fit-up, hydro-testing, piping erection, schedules, production reporting and shipping.</li><li>Resolved shop drawing queries and coordinated quality, safety and nonconformity matters with QA/QC.</li></ul></div></article></div></div></section>
-<section id="projects"><div class="container"><div class="kicker reveal">Project Exposure</div><h2 class="reveal">Selected major EPC projects</h2><p class="muted reveal">A selection of projects included in my professional experience.</p><div class="project-grid"><article class="project glass reveal"><span class="tag">OIL & GAS</span><h3>Upper Zakum UZ-750 EPC2</h3><p>Island Surface Facilities · ZADCO / Gulf Piping Company</p></article><article class="project glass reveal"><span class="tag">MINING & MINERALS</span><h3>Middle East Mining & Minerals Refinery</h3><p>Bechtel Petrofac JV</p></article><article class="project glass reveal"><span class="tag">ENERGY</span><h3>Waste Heat Recovery</h3><p>Samsung Engineering</p></article><article class="project glass reveal"><span class="tag">AVIATION</span><h3>Al Bateen Aviation Fuel Depot</h3><p>Tata Projects</p></article><article class="project glass reveal"><span class="tag">OIL & GAS</span><h3>ADNOC Crude Flex — Packages 1 & 2</h3><p>Samsung</p></article><article class="project glass reveal"><span class="tag">REFINING</span><h3>DUQM Refinery — Package 1</h3><p>TR</p></article></div></div></section>
-<section id="education"><div class="container"><div class="kicker reveal">Qualifications & Tools</div><h2 class="reveal">Engineering foundation</h2><div class="split"><div class="edu-grid"><article class="edu glass reveal"><span class="year">2021</span><h3>B.Tech — Mechanical Engineering</h3><p>AMIIE — Indian Institute of Engineers, Delhi</p></article><article class="edu glass reveal"><span class="year">2016</span><h3>Diploma — Mechanical Engineering</h3><p>Government Polytechnic College, Kerala</p></article></div><div class="reveal"><div class="panel glass"><h3>Engineering & Drafting Software</h3><p>AutoCAD · Isomec · Spoolgen · Autospool · JD Edwards (JDE)</p></div><div class="panel glass" style="margin-top:16px"><h3>Digital & Productivity Tools</h3><p>Advanced Excel/VBA · Python · Power Automate · Microsoft Office</p></div><div class="panel glass" style="margin-top:16px"><h3>Additional Information</h3><p>English · Malayalam · Hindi<br>UAE & India driving licences · UAE employment visa · 30-day notice period</p></div></div></div></div></section>
-<section id="contact"><div class="container contact reveal"><div class="contact-grid"><div><div class="kicker">Connect · Abu Dhabi, UAE</div><h2>Engineering challenges. Practical solutions.</h2><p>Open to professional conversations about piping engineering, project coordination, fabrication, and engineering workflow improvement.</p></div><div class="contact-buttons"><a class="btn btn-primary" href="mailto:nvnivinvarkey@outlook.com">✉ Email Me</a><a class="btn btn-secondary" href="tel:+971589662260">☎ Call</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section></main><footer><div class="container">© 2026 Nivin Varkey · Piping Engineering & Fabrication · Abu Dhabi, UAE<div class="footer-links"><a href="mailto:nvnivinvarkey@outlook.com">nvnivinvarkey@outlook.com</a><a href="tel:+971589662260">+971 58 966 2260</a><a href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
-<script>
-const intro=document.getElementById('intro');
-const video=document.getElementById('welcomeVideo');
-const progress=document.getElementById('videoProgress');
-const soundBtn=document.getElementById('soundBtn');
-const statusBox=document.getElementById('introStatus');
-let introClosed=false;
-let videoFailed=false;
-function showVideoStatus(message){statusBox.textContent=message;statusBox.hidden=false;}
-function clearVideoStatus(){statusBox.textContent='';statusBox.hidden=true;}
-function closeIntro(){
-  if(introClosed)return;
-  introClosed=true;
-  intro.classList.add('hidden');
-  document.body.style.overflow='';
-  video.pause();
-}
-function failIntro(message){
-  videoFailed=true;
-  intro.classList.add('video-missing');
-  intro.classList.remove('video-ready');
-  soundBtn.hidden=true;
-  showVideoStatus(message+' You can select "Enter portfolio" or "Skip intro" to continue.');
-  document.body.style.overflow='';
-}
-async function playIntro(){
-  clearVideoStatus();
-  intro.classList.remove('video-missing');
-  soundBtn.hidden=false;
-  if(video.error){failIntro('The introduction video could not be loaded. Confirm welcome.mp4 exists in the GitHub repository root and is encoded as H.264 MP4.');return;}
-  try{await video.play();}
-  catch(error){
-    // Mobile browsers and privacy settings can block playback even when muted.
-    showVideoStatus('Autoplay was blocked. Select "Enable sound" to start playback, or enter the portfolio.');
-    console.warn('Introduction video autoplay blocked:',error);
-  }
-}
-function openIntro(){
-  introClosed=false;
-  intro.classList.remove('hidden');
-  document.body.style.overflow='hidden';
-  video.muted=true;
-  soundBtn.textContent='Enable sound';
-  try{video.currentTime=0;}catch(e){}
-  playIntro();
-}
-video.addEventListener('playing',()=>{
-  videoFailed=false;
-  intro.classList.add('video-ready');
-  intro.classList.remove('video-missing');
-  clearVideoStatus();
-});
-video.addEventListener('error',()=>{
-  failIntro('The video failed to load.');
-  console.error('Video error:',video.error,'Video URL:',video.currentSrc);
-});
-video.addEventListener('timeupdate',()=>{
-  if(Number.isFinite(video.duration)&&video.duration>0){
-    progress.style.width=(video.currentTime/video.duration*100)+'%';
-  }
-});
-video.addEventListener('ended',closeIntro);
-document.getElementById('skipBtn').addEventListener('click',closeIntro);
-document.getElementById('enterBtn').addEventListener('click',closeIntro);
-document.getElementById('replayBtn').addEventListener('click',openIntro);
-soundBtn.addEventListener('click',async()=>{
-  if(videoFailed)return;
-  video.muted=!video.muted;
-  soundBtn.textContent=video.muted?'Enable sound':'Mute sound';
-  try{await video.play();clearVideoStatus();}
-  catch(e){showVideoStatus('Playback is unavailable. Confirm welcome.mp4 is uploaded and playable in your browser.');}
-});
-// Start playback explicitly as well as using the autoplay attribute.
-// If the file is absent, the error handler leaves the page accessible.
-document.body.style.overflow='hidden';
-if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded',playIntro,{once:true});
-}else{playIntro();}
-const photo=document.getElementById('profilePhoto');photo.addEventListener('load',()=>document.getElementById('portraitMedia').classList.add('has-photo'));photo.addEventListener('error',()=>{});if(photo.complete&&photo.naturalWidth)document.getElementById('portraitMedia').classList.add('has-photo');
-const menu=document.getElementById('navLinks');document.getElementById('menuBtn').onclick=()=>menu.classList.toggle('open');[...menu.querySelectorAll('a')].forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on'));
-const c=document.getElementById('scienceCanvas'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),pts=[];const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function resize(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(dpr,0,0,dpr,0,0);pts=Array.from({length:Math.min(65,Math.floor(W/22))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.5+.7}))}
-function draw(){x.clearRect(0,0,W,H);for(const p of pts){if(!reduce){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(99,230,255,.25)';x.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<125){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(90,185,215,'+(.065*(1-d/125))+')';x.stroke()}}if(!reduce)requestAnimationFrame(draw)}addEventListener('resize',()=>{resize();if(reduce)draw()});resize();draw();
-</script></body></html>
+    .panel h3 {
+      font: 700 1.15rem "Space Grotesk";
+      margin: 0 0 9px
+    }
+
+    .panel p {
+      color: #afc1cf;
+      margin: 0
+    }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px
+    }
+
+    .fit {
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(9, 28, 45, .6);
+      border: 1px solid var(--line)
+    }
+
+    .fit b {
+      display: block;
+      color: #fff;
+      margin-bottom: 5px
+    }
+
+    .fit small {
+      color: var(--muted)
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .skill {
+      border-radius: 21px;
+      padding: 22px;
+      min-height: 176px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .skill:after {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      right: -45px;
+      bottom: -45px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 230, 255, .13), transparent 68%)
+    }
+
+    .skill-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: rgba(99, 230, 255, .08);
+      border: 1px solid rgba(99, 230, 255, .2);
+      font-size: 1.25rem;
+      margin-bottom: 14px
+    }
+
+    .skill h3 {
+      font: 700 1.02rem "Space Grotesk";
+      margin: 0 0 7px
+    }
+
+    .skill p {
+      font-size: .9rem;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 27px;
+      border-radius: 22px;
+      padding: 25px
+    }
+
+    .job-date {
+      font-size: .82rem;
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: .06em
+    }
+
+    .job h3 {
+      font: 700 1.12rem "Space Grotesk";
+      margin: 0 0 5px
+    }
+
+    .job-org {
+      color: var(--gold);
+      font-size: .9rem;
+      margin-bottom: 10px
+    }
+
+    .job ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #aebfcc;
+      font-size: .93rem
+    }
+
+    .job li+li {
+      margin-top: 5px
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px
+    }
+
+    .edu {
+      border-radius: 21px;
+      padding: 23px
+    }
+
+    .edu .year {
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em
+    }
+
+    .edu h3 {
+      font: 700 1.06rem "Space Grotesk";
+      margin: 5px 0 3px
+    }
+
+    .edu p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    .edu .score {
+      color: var(--bio);
+      font-weight: 800;
+      margin-top: 8px;
+      display: block;
+      font-size: .86rem
+    }
+
+    .cred-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .cred {
+      border-radius: 20px;
+      padding: 22px;
+      background: linear-gradient(145deg, rgba(115, 230, 164, .08), rgba(12, 31, 50, .64));
+      border: 1px solid rgba(115, 230, 164, .22)
+    }
+
+    .cred strong {
+      display: block;
+      font: 700 1.15rem "Space Grotesk";
+      color: #d7ffe6
+    }
+
+    .cred span {
+      font-size: .87rem;
+      color: var(--muted)
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px
+    }
+
+    .activity {
+      border-radius: 20px;
+      padding: 21px
+    }
+
+    .activity time {
+      color: var(--gold);
+      font-size: .77rem;
+      font-weight: 800
+    }
+
+    .activity h3 {
+      font: 700 1rem "Space Grotesk";
+      margin: 7px 0 3px
+    }
+
+    .activity p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem
+    }
+
+    .contact {
+      border-radius: 30px;
+      padding: 42px;
+      background: linear-gradient(120deg, rgba(9, 42, 64, .94), rgba(7, 26, 44, .94));
+      border: 1px solid rgba(99, 230, 255, .24);
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact:after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -160px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 230, 255, .15), transparent 65%)
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: center
+    }
+
+    .contact p {
+      color: #b3c4d1;
+      max-width: 650px
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 11px;
+      justify-content: flex-end;
+      flex-wrap: wrap
+    }
+
+    footer {
+      padding: 29px 0 45px;
+      color: #7890a3;
+      font-size: .86rem;
+      text-align: center
+    }
+
+    .footer-links {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: .65s ease
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(max-width:980px) {
+      .links {
+        display: none
+      }
+
+      .links.open {
+        display: flex;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: 70px;
+        background: rgba(5, 13, 23, .97);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .mobile-toggle {
+        display: block
+      }
+
+      .hero-grid,
+      .split,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding-top: 45px
+      }
+
+      .portrait-zone {
+        min-height: 520px
+      }
+
+      .stats {
+        margin-top: 0
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line)
+      }
+
+      .skills {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .contact-buttons {
+        justify-content: flex-start
+      }
+
+      .portrait-badge {
+        left: 0
+      }
+    }
+
+    @media(max-width:650px) {
+      section {
+        padding: 72px 0
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max))
+      }
+
+      .hero h1 {
+        font-size: 3.5rem
+      }
+
+      .portrait-zone {
+        min-height: 440px
+      }
+
+      .portrait-orbit {
+        width: 380px;
+        height: 380px
+      }
+
+      .portrait-card {
+        width: 320px
+      }
+
+      .atom {
+        right: 0;
+        top: 35px;
+        width: 80px;
+        height: 80px
+      }
+
+      .portrait-badge {
+        bottom: 20px;
+        max-width: 180px
+      }
+
+      .stats-grid,
+      .skills,
+      .edu-grid,
+      .cred-row,
+      .activity-grid,
+      .fit-grid {
+        grid-template-columns: 1fr
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .stat:last-child {
+        border-bottom: 0
+      }
+
+      .job {
+        grid-template-columns: 1fr;
+        gap: 7px
+      }
+
+      .contact {
+        padding: 28px
+      }
+
+      .intro-ui {
+        height: 90vh
+      }
+
+      .intro-bottom {
+        align-items: flex-end
+      }
+
+      .intro-copy h1 {
+        font-size: 3.2rem
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .portrait-orbit {
+        animation: none
+      }
+
+      .reveal {
+        transition: none
+      }
+    }
+
+    /* Engineering portfolio refinements */
+    .eng-badge {
+      font-size: 3.1rem;
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: -.12em;
+      line-height: 1
+    }
+
+    .eng-visual {
+      width: 100%;
+      aspect-ratio: 4/5;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      background: radial-gradient(circle at 50% 40%, rgba(35, 139, 172, .20), transparent 56%), linear-gradient(145deg, #0c2b43, #06121f)
+    }
+
+    .eng-visual svg {
+      width: 85%;
+      height: auto;
+      filter: drop-shadow(0 0 25px rgba(99, 230, 255, .25))
+    }
+
+    .eng-visual .vis-caption {
+      position: absolute;
+      bottom: 25px;
+      left: 20px;
+      right: 20px;
+      text-align: center;
+      font-size: .76rem;
+      letter-spacing: .19em;
+      color: #a8dae8;
+      font-weight: 800
+    }
+
+    .eng-photo {
+      display: none;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2
+    }
+
+    .portrait-media.has-photo .eng-photo {
+      display: block
+    }
+
+    .portrait-media.has-photo .eng-visual {
+      display: none
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .project {
+      padding: 24px;
+      border-radius: 22px
+    }
+
+    .project .tag {
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: .08em;
+      font-size: .75rem
+    }
+
+    .project h3 {
+      font: 700 1.08rem 'Space Grotesk';
+      margin: 12px 0 9px
+    }
+
+    .project p {
+      font-size: .9rem;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .intro-fallback {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 65% 40%, rgba(35, 136, 181, .25), transparent 45%), linear-gradient(135deg, #071626, #020811);
+      display: grid;
+      place-items: center
+    }
+
+    .intro-fallback .gear {
+      font-size: clamp(8rem, 27vw, 19rem);
+      opacity: .13;
+      color: var(--cyan);
+      animation: spin 35s linear infinite
+    }
+
+    #intro:has(video:not([src])) .intro-fallback {
+      display: grid
+    }
+
+    #intro.video-ready .intro-fallback {
+      display: none
+    }
+
+    #intro.video-missing .intro-progress {
+      display: none
+    }
+
+    @media(max-width:980px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:650px) {
+      .project-grid {
+        grid-template-columns: 1fr
+      }
+
+      .eng-visual {
+        aspect-ratio: 4/5
+      }
+    }
+
+    /* Profile video: autoplay muted, fade to portrait on completion */
+    .portrait-media .profile-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 28px;
+      z-index: 3;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .75s ease
+    }
+
+    .portrait-media.profile-playing .profile-video {
+      opacity: 1
+    }
+
+    .portrait-media .profile-video-controls {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      z-index: 4;
+      display: none;
+      gap: 7px
+    }
+
+    .portrait-media.profile-playing .profile-video-controls {
+      display: flex
+    }
+
+    .profile-video-controls button,
+    .profile-replay {
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: 999px;
+      background: rgba(4, 16, 26, .77);
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: .78rem;
+      backdrop-filter: blur(8px)
+    }
+
+    .portrait-media .profile-replay {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      z-index: 4;
+      display: none
+    }
+
+    .portrait-media.profile-completed .profile-replay:not([hidden]) {
+      display: block
+    }
+
+    .portrait-media:not(.has-photo):not(.profile-playing) .profile-replay {
+      bottom: 10px
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="scienceCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="intro" aria-label="Portfolio welcome">
+    <div class="intro-fallback" aria-hidden="true">
+      <div class="gear">⚙</div>
+    </div><video id="welcomeVideo" src="welcome.mp4" autoplay muted playsinline webkit-playsinline
+      preload="auto"></video>
+    <div class="intro-ui">
+      <div class="intro-top">
+        <div class="intro-brand">
+          <div class="intro-mark">NV</div>
+          <div>NIVIN VARKEY<small
+              style="display:block;font:500 .72rem Inter;color:rgba(255,255,255,.7);letter-spacing:.12em">ENGINEERING &
+              FABRICATION</small></div>
+        </div>
+        <div class="intro-actions"><button class="intro-btn" id="soundBtn">Enable sound</button><button
+            class="intro-btn" id="skipBtn">Skip intro</button></div>
+      </div>
+      <div class="intro-bottom">
+        <div class="intro-copy"><span>Welcome to my engineering portfolio</span>
+          <h1>Engineering precision.<br>Delivering progress.</h1>
+          <p>Piping Engineering · Fabrication · Digital Workflows · Abu Dhabi, UAE</p>
+        </div><button class="intro-btn" id="enterBtn">Enter portfolio →</button>
+      </div>
+    </div>
+    <div class="intro-status" id="introStatus" role="status" aria-live="polite" hidden></div>
+    <div class="intro-progress"><i id="videoProgress"></i></div>
+  </div>
+  <nav>
+    <div class="container nav-inner"><a class="brand" href="#home"><span class="brand-logo">NV</span><span>Nivin
+          Varkey<small>Piping Engineering & Fabrication</small></span></a><button class="mobile-toggle" id="menuBtn"
+        aria-label="Open navigation">☰</button>
+      <div class="links" id="navLinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a
+          href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a
+          href="#contact" class="nav-cta">Let's Connect</a></div>
+    </div>
+  </nav>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal on">
+          <div class="kicker">Engineering Professional · Abu Dhabi, UAE</div>
+          <h1>Nivin<br><em>Varkey</em></h1>
+          <div class="role">PROJECT ENGINEERING · PIPING FABRICATION · SHOP COORDINATION</div>
+          <p class="hero-copy">Piping engineering and fabrication professional with <strong>9+ years of
+              experience</strong> supporting EPC projects through spool detailing, engineering coordination, document
+            and material control, shop execution, and practical process automation.</p>
+          <div class="chip-row"><span class="chip">Team Leadership</span><span class="chip">Pipe Spool
+              Fabrication</span><span class="chip">JD Edwards / JDE</span><span class="chip">Excel, Python & Power
+              Automate</span></div>
+          <div class="actions"><a class="btn btn-primary" href="Nivin_Varkey_Project_Engineer_CV.pdf" download>↓
+              Download CV</a><a class="btn btn-secondary" href="#projects">Explore Projects ↗</a></div><button
+            class="replay" id="replayBtn">↻ Replay introduction</button>
+        </div>
+        <div class="portrait-zone reveal on">
+          <div class="portrait-orbit"></div>
+          <div class="portrait-card">
+            <div class="portrait-media" id="portraitMedia">
+              <div class="eng-visual" aria-label="Engineering piping illustration"><svg viewBox="0 0 500 540" role="img"
+                  aria-label="Stylized industrial piping isometric diagram">
+                  <defs>
+                    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#a6edff" />
+                      <stop offset="1" stop-color="#1c779e" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" stroke="url(#steel)" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">
+                    <path d="M72 370 L188 303 L300 365 L426 289" />
+                    <path d="M188 303 L188 172 L299 108 L400 166 L400 232" />
+                    <path d="M300 365 L300 445" />
+                    <path d="M72 370 L72 276 L136 237" />
+                  </g>
+                  <g fill="none" stroke="#63e6ff" stroke-width="3" opacity=".65">
+                    <path d="M54 389 L188 311 L302 374 L445 291" />
+                    <path d="M170 172 L297 98 L418 168" />
+                    <ellipse cx="300" cy="445" rx="31" ry="15" />
+                    <path d="M269 445 V461 A31 15 0 0 0 331 461 V445" />
+                    <circle cx="188" cy="303" r="30" />
+                    <circle cx="300" cy="365" r="30" />
+                  </g>
+                  <g fill="#63e6ff">
+                    <circle cx="72" cy="370" r="6" />
+                    <circle cx="426" cy="289" r="6" />
+                    <circle cx="188" cy="172" r="6" />
+                  </g>
+                  <g fill="none" stroke="#76e3c7" stroke-width="1.4" stroke-dasharray="6 8" opacity=".55">
+                    <path d="M47 445 H450 M48 140 H448 M248 66 V495" />
+                  </g>
+                </svg>
+                <div class="vis-caption">ENGINEERING • PRECISION • DELIVERY</div>
+              </div><img class="eng-photo" id="profilePhoto" src="nivin-varkey.jpg" alt="Nivin Varkey" />
+              <video id="profileVideo" class="profile-video" src="profile.mp4" muted playsinline webkit-playsinline
+                preload="metadata" aria-label="Nivin Varkey profile video"></video>
+              <div class="profile-video-controls" id="profileVideoControls"><button id="profileSoundBtn"
+                  type="button">Enable sound</button><button id="profileSkipBtn" type="button">Skip video</button></div>
+              <button class="profile-replay" id="profileReplayBtn" type="button" hidden>↻ Replay video</button>
+            </div>
+          </div>
+          <div class="portrait-badge"><b>9+ Years in Engineering</b><small>EPC Piping · Spooling · Fabrication ·
+              Coordination</small></div>
+          <div class="atom" aria-hidden="true">⚙</div>
+        </div>
+      </div>
+    </section>
+    <div class="container stats">
+      <div class="stats-grid glass reveal">
+        <div class="stat"><strong><i>9+</i> Years</strong><span>Piping & fabrication experience</span></div>
+        <div class="stat"><strong><i>10</i> Members</strong><span>Engineering support team led</span></div>
+        <div class="stat"><strong><i>15+</i> Personnel</strong><span>Shop-floor crew coordinated</span></div>
+        <div class="stat"><strong><i>90%</i> Approx.</strong><span>On-time engineering releases</span></div>
+      </div>
+    </div>
+    <section id="about">
+      <div class="container split">
+        <div class="reveal">
+          <div class="kicker">About Me</div>
+          <h2>Connecting engineering intent with fabrication execution.</h2>
+          <p class="muted">I combine engineering document control, pipe spool detailing, fabrication support, and shop
+            coordination to keep technical information accurate and production-ready. My work includes resolving drawing
+            and BOM discrepancies, managing revisions, supporting materials flow, and coordinating with engineering,
+            procurement, fabrication, and QA/QC teams.</p>
+        </div>
+        <div class="fit-grid reveal">
+          <div class="fit"><b>Engineering Coordination</b><small>Concurrent EPC projects, drawing reviews, revision
+              control, and technical clarifications.</small></div>
+          <div class="fit"><b>Fabrication Operations</b><small>Spool releases, fit-up, hydro-testing, erection, and
+              dispatch support.</small></div>
+          <div class="fit"><b>Materials & Traceability</b><small>BOM validation, JDE processing, material workflows,
+              controlled records.</small></div>
+          <div class="fit"><b>Engineering Automation</b><small>Excel/VBA, Python, and Power Automate for reporting and
+              repetitive workflows.</small></div>
+        </div>
+      </div>
+    </section>
+    <section id="expertise">
+      <div class="container">
+        <div class="kicker reveal">Core Capabilities</div>
+        <h2 class="reveal">Technical and operational expertise</h2>
+        <div class="skills">
+          <article class="skill glass reveal">
+            <div class="skill-icon">⚙</div>
+            <h3>Pipe Spool Detailing</h3>
+            <p>Isometric interpretation, fabrication drawings, Spoolgen, Autospool, AutoCAD, PCF/IDF and IPMF files.</p>
+          </article>
+          <article class="skill glass reveal">
+            <div class="skill-icon">📐</div>
+            <h3>Engineering Review</h3>
+            <p>Client specifications, drawing revisions, technical queries, controlled releases, ASME and ASTM
+              requirements.</p>
+          </article>
+          <article class="skill glass reveal">
+            <div class="skill-icon">🏭</div>
+            <h3>Shop Coordination</h3>
+            <p>Fit-up, welding operations, hydro-testing, installation interfaces, schedules and shipping support.</p>
+          </article>
+          <article class="skill glass reveal">
+            <div class="skill-icon">📦</div>
+            <h3>BOM & Material Control</h3>
+            <p>JD Edwards BOM validation, purchase requisitions, material traceability, and release package
+              coordination.</p>
+          </article>
+          <article class="skill glass reveal">
+            <div class="skill-icon">👥</div>
+            <h3>Team Leadership</h3>
+            <p>Work allocation, team coaching, document/material control supervision and process improvements.</p>
+          </article>
+          <article class="skill glass reveal">
+            <div class="skill-icon">💻</div>
+            <h3>Workflow Automation</h3>
+            <p>Advanced Excel/VBA, Python, Power Automate and engineering reporting improvements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="container">
+        <div class="kicker reveal">Career Journey</div>
+        <h2 class="reveal">Professional experience</h2>
+        <div class="timeline">
+          <article class="job glass reveal">
+            <div class="job-date">DEC 2022 — PRESENT</div>
+            <div>
+              <h3>Team Lead — Piping (Engineering Department)</h3>
+              <div class="job-org">EPIC Piping International · Abu Dhabi, UAE</div>
+              <ul>
+                <li>Lead a 10-member document and material control team supporting simultaneous piping fabrication
+                  projects.</li>
+                <li>Coordinate engineering releases, revisions, BOM/JDE validation, material requirements and technical
+                  discrepancy resolution.</li>
+                <li>Maintain approximately 90% on-time engineering release performance through prioritization and
+                  process control.</li>
+                <li>Work across engineering, procurement, fabrication and quality teams, with traceable project records.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="job glass reveal">
+            <div class="job-date">NOV 2019 — DEC 2022</div>
+            <div>
+              <h3>Piping Detailer / Drafter</h3>
+              <div class="job-org">EPIC Piping International · Abu Dhabi, UAE</div>
+              <ul>
+                <li>Produced pipe spool fabrication drawings from client isometrics using Spoolgen, Autospool and
+                  AutoCAD.</li>
+                <li>Incorporated client revisions and maintained controlled spool packages.</li>
+                <li>Corrected IPMF and missing or corrupted PCF/IDF data to reduce detailing delays and production
+                  holds.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job glass reveal">
+            <div class="job-date">JUN 2017 — NOV 2019</div>
+            <div>
+              <h3>Shop Coordinator</h3>
+              <div class="job-org">Penta Global Engineering · Abu Dhabi, UAE</div>
+              <ul>
+                <li>Coordinated daily activities of 15+ fabrication personnel, including welders, fitters, tackers and
+                  hydro-test staff.</li>
+                <li>Supported fit-up, hydro-testing, piping erection, schedules, production reporting and shipping.</li>
+                <li>Resolved shop drawing queries and coordinated quality, safety and nonconformity matters with QA/QC.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="kicker reveal">Project Exposure</div>
+        <h2 class="reveal">Selected major EPC projects</h2>
+        <p class="muted reveal">A selection of projects included in my professional experience.</p>
+        <div class="project-grid">
+          <article class="project glass reveal"><span class="tag">OIL & GAS</span>
+            <h3>Upper Zakum UZ-750 EPC2</h3>
+            <p>Island Surface Facilities · ZADCO / Gulf Piping Company</p>
+          </article>
+          <article class="project glass reveal"><span class="tag">MINING & MINERALS</span>
+            <h3>Middle East Mining & Minerals Refinery</h3>
+            <p>Bechtel Petrofac JV</p>
+          </article>
+          <article class="project glass reveal"><span class="tag">ENERGY</span>
+            <h3>Waste Heat Recovery</h3>
+            <p>Samsung Engineering</p>
+          </article>
+          <article class="project glass reveal"><span class="tag">AVIATION</span>
+            <h3>Al Bateen Aviation Fuel Depot</h3>
+            <p>Tata Projects</p>
+          </article>
+          <article class="project glass reveal"><span class="tag">OIL & GAS</span>
+            <h3>ADNOC Crude Flex — Packages 1 & 2</h3>
+            <p>Samsung</p>
+          </article>
+          <article class="project glass reveal"><span class="tag">REFINING</span>
+            <h3>DUQM Refinery — Package 1</h3>
+            <p>TR</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="container">
+        <div class="kicker reveal">Qualifications & Tools</div>
+        <h2 class="reveal">Engineering foundation</h2>
+        <div class="split">
+          <div class="edu-grid">
+            <article class="edu glass reveal"><span class="year">2021</span>
+              <h3>B.Tech — Mechanical Engineering</h3>
+              <p>AMIIE — Indian Institute of Engineers, Delhi</p>
+            </article>
+            <article class="edu glass reveal"><span class="year">2016</span>
+              <h3>Diploma — Mechanical Engineering</h3>
+              <p>Government Polytechnic College, Kerala</p>
+            </article>
+          </div>
+          <div class="reveal">
+            <div class="panel glass">
+              <h3>Engineering & Drafting Software</h3>
+              <p>AutoCAD · Isomec · Spoolgen · Autospool · JD Edwards (JDE)</p>
+            </div>
+            <div class="panel glass" style="margin-top:16px">
+              <h3>Digital & Productivity Tools</h3>
+              <p>Advanced Excel/VBA · Python · Power Automate · Microsoft Office</p>
+            </div>
+            <div class="panel glass" style="margin-top:16px">
+              <h3>Additional Information</h3>
+              <p>English · Malayalam · Hindi<br>UAE & India driving licences · UAE employment visa · 30-day notice
+                period</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container contact reveal">
+        <div class="contact-grid">
+          <div>
+            <div class="kicker">Connect · Abu Dhabi, UAE</div>
+            <h2>Engineering challenges. Practical solutions.</h2>
+            <p>Open to professional conversations about piping engineering, project coordination, fabrication, and
+              engineering workflow improvement.</p>
+          </div>
+          <div class="contact-buttons"><a class="btn btn-primary" href="mailto:nvnivinvarkey@outlook.com">✉ Email
+              Me</a><a class="btn btn-secondary" href="tel:+971589662260">☎ Call</a><a class="btn btn-secondary"
+              href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">© 2026 Nivin Varkey · Piping Engineering & Fabrication · Abu Dhabi, UAE<div
+        class="footer-links"><a href="mailto:nvnivinvarkey@outlook.com">nvnivinvarkey@outlook.com</a><a
+          href="tel:+971589662260">+971 58 966 2260</a><a href="https://www.linkedin.com/in/nivinvarkey/"
+          target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+    </div>
+  </footer>
+  <script>
+    const intro = document.getElementById('intro');
+    const video = document.getElementById('welcomeVideo');
+    const progress = document.getElementById('videoProgress');
+    const soundBtn = document.getElementById('soundBtn');
+    const statusBox = document.getElementById('introStatus');
+    let introClosed = false;
+    let videoFailed = false;
+    function showVideoStatus(message) { statusBox.textContent = message; statusBox.hidden = false; }
+    function clearVideoStatus() { statusBox.textContent = ''; statusBox.hidden = true; }
+    function closeIntro() {
+      if (introClosed) return;
+      introClosed = true;
+      intro.classList.add('hidden');
+      document.body.style.overflow = '';
+      video.pause();
+      startProfileVideo();
+    }
+    function failIntro(message) {
+      videoFailed = true;
+      intro.classList.add('video-missing');
+      intro.classList.remove('video-ready');
+      soundBtn.hidden = true;
+      showVideoStatus(message + ' You can select "Enter portfolio" or "Skip intro" to continue.');
+      document.body.style.overflow = '';
+    }
+    async function playIntro() {
+      clearVideoStatus();
+      intro.classList.remove('video-missing');
+      soundBtn.hidden = false;
+      if (video.error) { failIntro('The introduction video could not be loaded. Confirm welcome.mp4 exists in the GitHub repository root and is encoded as H.264 MP4.'); return; }
+      try { await video.play(); }
+      catch (error) {
+        // Mobile browsers and privacy settings can block playback even when muted.
+        showVideoStatus('Autoplay was blocked. Select "Enable sound" to start playback, or enter the portfolio.');
+        console.warn('Introduction video autoplay blocked:', error);
+      }
+    }
+    function openIntro() {
+      introClosed = false;
+      intro.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      video.muted = true;
+      soundBtn.textContent = 'Enable sound';
+      try { video.currentTime = 0; } catch (e) { }
+      playIntro();
+    }
+    video.addEventListener('playing', () => {
+      videoFailed = false;
+      intro.classList.add('video-ready');
+      intro.classList.remove('video-missing');
+      clearVideoStatus();
+    });
+    video.addEventListener('error', () => {
+      failIntro('The video failed to load.');
+      console.error('Video error:', video.error, 'Video URL:', video.currentSrc);
+    });
+    video.addEventListener('timeupdate', () => {
+      if (Number.isFinite(video.duration) && video.duration > 0) {
+        progress.style.width = (video.currentTime / video.duration * 100) + '%';
+      }
+    });
+    video.addEventListener('ended', closeIntro);
+    document.getElementById('skipBtn').addEventListener('click', closeIntro);
+    document.getElementById('enterBtn').addEventListener('click', closeIntro);
+    document.getElementById('replayBtn').addEventListener('click', openIntro);
+    soundBtn.addEventListener('click', async () => {
+      if (videoFailed) return;
+      video.muted = !video.muted;
+      soundBtn.textContent = video.muted ? 'Enable sound' : 'Mute sound';
+      try { await video.play(); clearVideoStatus(); }
+      catch (e) { showVideoStatus('Playback is unavailable. Confirm welcome.mp4 is uploaded and playable in your browser.'); }
+    });
+    // Start playback explicitly as well as using the autoplay attribute.
+    // If the file is absent, the error handler leaves the page accessible.
+    document.body.style.overflow = 'hidden';
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', playIntro, { once: true });
+    } else { playIntro(); }
+    // Show profile photo when available; otherwise retain the engineering illustration.
+    const photo = document.getElementById('profilePhoto');
+    const portraitMedia = document.getElementById('portraitMedia');
+    photo.addEventListener('load', () => portraitMedia.classList.add('has-photo'));
+    photo.addEventListener('error', () => portraitMedia.classList.remove('has-photo'));
+    if (photo.complete && photo.naturalWidth > 0) portraitMedia.classList.add('has-photo');
+    // Run the profile video after the welcome overlay closes. Show photo on end/error.
+    const profileVideo = document.getElementById('profileVideo');
+    const profileSoundBtn = document.getElementById('profileSoundBtn');
+    const profileReplayBtn = document.getElementById('profileReplayBtn');
+    let profileStarted = false;
+    function finishProfileVideo(canReplay = true) {
+      portraitMedia.classList.remove('profile-playing');
+      portraitMedia.classList.add('profile-completed');
+      profileVideo.pause();
+      profileReplayBtn.hidden = !canReplay;
+    }
+    async function startProfileVideo() {
+      if (profileStarted || !profileVideo) return;
+      profileStarted = true;
+      profileVideo.muted = true;
+      profileSoundBtn.textContent = 'Enable sound';
+      profileReplayBtn.hidden = true;
+      if (profileVideo.error) { finishProfileVideo(false); return; }
+      try {
+        await profileVideo.play();
+        portraitMedia.classList.remove('profile-completed');
+        portraitMedia.classList.add('profile-playing');
+      } catch (err) {
+        console.warn('Profile video unavailable:', err);
+        finishProfileVideo(false);
+      }
+    }
+    profileVideo.addEventListener('ended', () => finishProfileVideo(true));
+    profileVideo.addEventListener('error', () => finishProfileVideo(false));
+    document.getElementById('profileSkipBtn').addEventListener('click', () => finishProfileVideo(true));
+    profileSoundBtn.addEventListener('click', async () => {
+      profileVideo.muted = !profileVideo.muted;
+      profileSoundBtn.textContent = profileVideo.muted ? 'Enable sound' : 'Mute sound';
+      if (profileVideo.paused) try { await profileVideo.play(); } catch (_) { finishProfileVideo(false); }
+    });
+    profileReplayBtn.addEventListener('click', () => {
+      profileStarted = false;
+      try { profileVideo.currentTime = 0; } catch (_) { }
+      startProfileVideo();
+    });
+    const menu = document.getElementById('navLinks'); document.getElementById('menuBtn').onclick = () => menu.classList.toggle('open');[...menu.querySelectorAll('a')].forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    if ('IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') }), { threshold: .1 }); document.querySelectorAll('.reveal').forEach(el => io.observe(el)) } else document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+    const c = document.getElementById('scienceCanvas'), x = c.getContext('2d'); let W, H, dpr = Math.min(devicePixelRatio || 1, 2), pts = []; const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function resize() { W = innerWidth; H = innerHeight; c.width = W * dpr; c.height = H * dpr; c.style.width = W + 'px'; c.style.height = H + 'px'; x.setTransform(dpr, 0, 0, dpr, 0, 0); pts = Array.from({ length: Math.min(65, Math.floor(W / 22)) }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18, r: Math.random() * 1.5 + .7 })) }
+    function draw() { x.clearRect(0, 0, W, H); for (const p of pts) { if (!reduce) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1 } x.beginPath(); x.arc(p.x, p.y, p.r, 0, Math.PI * 2); x.fillStyle = 'rgba(99,230,255,.25)'; x.fill() } for (let i = 0; i < pts.length; i++)for (let j = i + 1; j < pts.length; j++) { const a = pts[i], b = pts[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy); if (d < 125) { x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.strokeStyle = 'rgba(90,185,215,' + (.065 * (1 - d / 125)) + ')'; x.stroke() } } if (!reduce) requestAnimationFrame(draw) } addEventListener('resize', () => { resize(); if (reduce) draw() }); resize(); draw();
+  </script>
+</body>
+
+</html>
