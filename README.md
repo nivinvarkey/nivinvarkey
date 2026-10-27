@@ -4,12 +4,12 @@ An entirely static, GitHub Pages-ready professional website with a premium respo
 
 ## What has changed
 
-- Kept the **original** `welcome.mp4` (16:9, approximately 10 seconds) **without any text overlays**.
+- Kept the **original** `welcome.mp4` (16:9, approximately 10 seconds) **without any text overlays**. It now runs **once behind the hero section**, with no opening popup and no looping.
 - Added a professional homepage and enhanced application showcase with clickable tabs for five engineering applications.
 - Integrated five screenshots supplied by the owner, compressed for web use. **Internal workstation/network path fields visible in two original screenshots have been blurred in the website copies**.
 - Added a searchable/filterable project gallery, detailed case-study popups and full-screen screenshot previews with keyboard navigation.
 - Added career progression, engineering capabilities, experience, EPC project exposure, skills, education and contact sections.
-- Includes a light/dark mode toggle, responsive navigation, scroll progress, reduced-motion support, accessible controls and a replayable welcome video.
+- Includes a light/dark mode toggle, responsive navigation, scroll progress, reduced-motion support, accessible controls and a one-time non-looping background welcome video with replay and mute controls.
 - Preserved the custom domain in `CNAME`, original professional portrait and CV PDF.
 - Retained the supplied GA4 ID `G-YC8H32CX1J` (confirm this ID is correct for this website; it may currently point to another property's data stream).
 
@@ -25,8 +25,8 @@ No build step, Node modules, framework runtime, backend or administrator rights 
 
 ## Important technical notes
 
-- The original `welcome.mp4` plays on the first visit **per browser tab/session** and automatically closes when finished. Mute is initially required for autoplay. It can be replayed from the hero or footer.
+- The original `welcome.mp4` plays **once in the homepage hero background** on each page load (not on loop). The video ends on its last frame and stays in the background. It never blocks website navigation. Replay buttons are in the hero and footer. Autoplay begins muted for browser compatibility; sound can be enabled manually. Reduced-motion preferences show the video poster unless the user initiates playback.
 - Video and screenshots are stored locally with the website; external services are only used for Google Fonts, Google Analytics and outbound external links.
 - The site does not claim that all tools are available as public downloads, and it does not publish private code, JDE data or credentials.
-- Screenshot overlays were **not added**. The video contains no newly added text overlays. The preview titles and buttons belong to the surrounding website interface.
+- Screenshot overlays were **not added**. The video contains no newly added text overlays. Ordinary homepage text is positioned in the foreground for usability, and is not edited or timed into the video.
 - Source edit locations: `index.html`, `assets/css/site.css` and `assets/js/site.js`. Application case-study descriptions and images are declared in the `applications` object at the top of the JavaScript file.

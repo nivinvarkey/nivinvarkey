@@ -27,17 +27,6 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- The original welcome.mp4 is used without text burned into the video or HTML text overlays. -->
-  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Welcome video" tabindex="-1">
-    <div class="intro-backdrop"></div>
-    <div class="intro-shell">
-      <div class="intro-toolbar"><div class="intro-brand"><span class="logo-icon">NV<span>.</span></span><span><strong>Welcome</strong><small>A quick introduction</small></span></div><button class="round-btn" type="button" id="introClose" aria-label="Skip welcome video">✕</button></div>
-      <div class="intro-frame"><video id="introVideo" playsinline muted autoplay preload="auto" poster="welcome-poster.jpg" aria-label="Nivin Varkey welcome video"><source src="welcome.mp4" type="video/mp4">Your browser does not support the video format.</video><div class="intro-error" id="introError" hidden><strong>Welcome to my portfolio</strong><p>The video could not start automatically. You can play it or enter the website.</p><button class="button outline" id="retryVideo" type="button">Try playing</button></div></div>
-      <div class="video-progress"><span id="videoProgress"></span></div>
-      <div class="intro-controls"><p class="intro-hint" id="introHint">The video starts muted. Enable sound to hear it.</p><div class="intro-buttons"><button class="button subtle" id="toggleAudio" type="button">♫ Enable sound</button><button class="button subtle" id="skipIntro" type="button">Skip</button><button class="button primary" id="enterSite" type="button">Enter portfolio <span>↗</span></button></div></div>
-    </div>
-  </div>
-
   <header class="site-header" id="siteHeader">
     <div class="shell nav-layout">
       <a class="brand" href="#home" aria-label="Nivin Varkey home"><span class="logo-icon">NV<span>.</span></span><span class="brand-meta"><strong>NIVIN VARKEY</strong><small>ENGINEERING × INNOVATION</small></span></a>
@@ -47,16 +36,29 @@
   </header>
 
   <main id="main">
-    <section id="home" class="hero section-hero"><div class="hero-grid shell">
-      <div class="hero-copy rise">
-        <div class="eyebrow"><span class="eyebrow-line"></span> ENGINEERING ROOTS. DIGITAL MINDSET.</div>
-        <h1>Building better<br><span class="highlight">engineering</span><br>workflows<span class="period">.</span></h1>
-        <p class="hero-lead">I'm <strong>Nivin Varkey</strong> — a piping engineering professional who turns complex fabrication, documentation and project-data challenges into practical, dependable digital tools.</p>
-        <div class="hero-actions"><a class="button primary" href="#applications">Explore my applications <span>↗</span></a><button class="button outline" id="watchWelcome" type="button">▶ Watch welcome</button></div>
-        <div class="hero-footer"><span><i class="indicator"></i> Based in Abu Dhabi, UAE</span><span>Engineering <em>+</em> Software Development</span></div>
+    <section id="home" class="hero section-hero hero-video-layout" aria-label="Nivin Varkey welcome and introduction">
+      <!-- The ORIGINAL welcome.mp4 runs ONCE in the hero background. No looping, captions or timed text overlays. -->
+      <div class="hero-background-media" aria-hidden="true">
+        <video id="heroBackgroundVideo" muted playsinline preload="metadata" poster="assets/images/welcome-poster.webp" disablepictureinpicture disableremoteplayback>
+          <source src="welcome.mp4" type="video/mp4">
+        </video>
       </div>
-      <div class="hero-portrait rise"><div class="portrait-backdrop"></div><div class="portrait-frame"><img src="assets/images/portrait.webp" width="830" height="1050" alt="Nivin Varkey professional portrait" fetchpriority="high"><div class="portrait-bottom"><div><small>ENGINEER / BUILDER / PROBLEM SOLVER</small><strong>Nivin Varkey</strong></div><span class="portrait-mono">NV / 26</span></div></div><div class="portrait-chip chip-top"><span>✦</span> Practical innovation</div><div class="portrait-chip chip-bottom"><span>⌘</span> Engineering automation</div></div>
-    </div><div class="shell hero-divider"><span>SCROLL TO EXPLORE</span><span class="line"></span><span class="arrow">↓</span></div></section>
+      <div class="hero-film-grading" aria-hidden="true"></div>
+      <div class="hero-grid shell">
+        <div class="hero-copy rise">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ENGINEERING ROOTS. DIGITAL MINDSET.</div>
+          <h1>Building better<br><span class="highlight">engineering</span><br>workflows<span class="period">.</span></h1>
+          <p class="hero-lead">I'm <strong>Nivin Varkey</strong> — a piping engineering professional who turns complex fabrication, documentation and project-data challenges into practical, dependable digital tools.</p>
+          <div class="hero-actions"><a class="button primary" href="#applications">Explore my applications <span>↗</span></a><button class="button hero-replay" id="watchWelcome" type="button" aria-label="Replay background video once">↻ Replay video</button></div>
+          <div class="hero-footer"><span><i class="indicator"></i> Based in Abu Dhabi, UAE</span><span>Engineering <em>+</em> Software Development</span></div>
+        </div>
+      </div>
+      <div class="hero-video-controls shell">
+        <span class="hero-video-note" id="backgroundVideoStatus" role="status" aria-live="polite">Video plays once · Muted by default</span>
+        <button class="hero-audio-button" id="backgroundAudioToggle" type="button" aria-pressed="false" aria-label="Enable background video sound">♫ Enable sound</button>
+      </div>
+      <div class="shell hero-divider"><span>SCROLL TO EXPLORE</span><span class="line"></span><span class="arrow">↓</span></div>
+    </section>
 
     <section class="metric-section shell" aria-label="Career highlights"><div class="metric-item"><strong>9<span>+</span></strong><p>Years in piping engineering<br>and fabrication</p></div><div class="metric-item"><strong>05</strong><p>Featured desktop<br>engineering tools</p></div><div class="metric-item"><strong>03</strong><p>Engineering career<br>progression stages</p></div><div class="metric-item metric-last"><span class="metric-badge">ENGINEERING × SOFTWARE</span><p>Bridging site execution<br>and digital productivity</p></div></section>
 
@@ -103,7 +105,7 @@
     <section id="contact" class="section contact-section"><div class="shell contact-grid"><div><div class="section-label">05 <span></span> LET'S CONNECT</div><h2>Let's build something<br><span>that works better.</span></h2><p>Interested in piping engineering, fabrication coordination, digital process improvement or engineering software? I'd be glad to connect.</p><div class="contact-action"><a class="button primary" href="mailto:nvnivinvarkey@outlook.com">Get in touch <span>↗</span></a><a class="button outline" href="Nivin_Varkey_Project_Engineer_CV.pdf" download>Download CV <span>↓</span></a></div></div><div class="contact-panel"><div class="contact-panel-head"><span>CONTACT DETAILS</span><span class="live-dot"></span></div><div class="contact-row"><span>Email</span><a href="mailto:nvnivinvarkey@outlook.com">nvnivinvarkey@outlook.com ↗</a></div><div class="contact-row"><span>Location</span><strong>Abu Dhabi, UAE</strong></div><div class="contact-row"><span>Portfolio</span><a href="https://nivin.professionals-cv.in/" rel="noopener noreferrer">nivin.professionals-cv.in ↗</a></div><div class="contact-row socials"><a href="https://www.linkedin.com/in/nivinvarkey/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/nivinvarkey" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button type="button" id="copyEmail">Copy email ⧉</button></div></div></div></section>
   </main>
 
-  <footer class="footer"><div class="shell footer-top"><a class="brand" href="#home"><span class="logo-icon">NV<span>.</span></span><span class="brand-meta"><strong>NIVIN VARKEY</strong><small>ENGINEERING × INNOVATION</small></span></a><div><button type="button" id="footerWelcome">▶ Replay welcome</button><a href="#applications">Applications</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></div><div class="shell footer-bottom"><span>© <span id="currentYear">2026</span> Nivin Varkey. Built for clarity, craft and progress.</span><span>Application screenshots may have internal paths obscured for privacy.</span></div></footer>
+  <footer class="footer"><div class="shell footer-top"><a class="brand" href="#home"><span class="logo-icon">NV<span>.</span></span><span class="brand-meta"><strong>NIVIN VARKEY</strong><small>ENGINEERING × INNOVATION</small></span></a><div><button type="button" id="footerWelcome">↻ Replay background video</button><a href="#applications">Applications</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></div><div class="shell footer-bottom"><span>© <span id="currentYear">2026</span> Nivin Varkey. Built for clarity, craft and progress.</span><span>Application screenshots may have internal paths obscured for privacy.</span></div></footer>
   <button class="back-top" id="backTop" type="button" title="Back to top" aria-label="Back to top">↑</button>
 
   <dialog class="modal" id="caseDialog" aria-labelledby="caseTitle"><div class="modal-wrap"><button type="button" class="modal-close" id="closeCase" aria-label="Close project details">✕</button><div class="modal-meta" id="caseCategory">ENGINEERING TOOL</div><h2 id="caseTitle">Project</h2><p class="modal-intro" id="caseIntro"></p><div class="case-body"><div><h3>What it solves</h3><p id="caseProblem"></p></div><div><h3>Key capabilities</h3><ul id="caseBullets"></ul></div></div><div class="modal-tech" id="caseTech"></div><div class="modal-footer"><button class="button outline" type="button" id="caseCloseBottom">Close overview</button><button class="button primary" type="button" id="caseToPreview">View screenshot ↗</button></div></div></dialog>
