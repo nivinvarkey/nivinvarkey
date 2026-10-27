@@ -46,3 +46,16 @@
 @media(prefers-reduced-motion:reduce){.hero-background-media video{visibility:hidden}.hero-background-media{background-image:url('../images/welcome-poster.webp')}}
 
 @media(prefers-reduced-motion:reduce){.hero-video-layout.allow-motion .hero-background-media video{visibility:visible}}
+
+/* V5: make the one-click, browser-policy-compliant audio start discoverable. */
+.hero-audio-button.sound-cta{background:linear-gradient(135deg,#61e2cd,#76b5ff)!important;color:#07111e!important;border-color:transparent!important;box-shadow:0 8px 26px rgba(97,226,205,.25);font-weight:800}
+.hero-audio-button.sound-cta:hover{filter:brightness(1.06)}
+.hero-audio-button:focus-visible{outline:3px solid #a6f9e8;outline-offset:3px}
+
+/* V6: sound-on interaction that works within browser autoplay restrictions. */
+.hero-video-layout .hero-listen{position:relative;background:linear-gradient(115deg,#79eed4,#8ab8ff);color:#081624;border:1px solid transparent;font-weight:800;box-shadow:0 12px 36px rgba(62,207,202,.19);min-height:47px;}
+.hero-video-layout .hero-listen:hover{filter:brightness(1.06);transform:translateY(-2px);background:linear-gradient(115deg,#9ff8e4,#abccff);color:#061624;}
+.hero-video-layout .hero-listen.needs-sound{animation:soundPromptGlow 2.8s ease-in-out infinite;}
+@keyframes soundPromptGlow{0%,100%{box-shadow:0 0 0 0 rgba(97,226,205,.17),0 10px 24px rgba(59,190,194,.17)}50%{box-shadow:0 0 0 5px rgba(97,226,205,.08),0 12px 33px rgba(59,190,194,.31)}}
+@media(prefers-reduced-motion: reduce){.hero-video-layout .hero-listen.needs-sound{animation:none}}
+.hero-video-layout .hero-audio-button.sound-cta{background:linear-gradient(115deg,#79eed4,#8ab8ff)!important;color:#081624!important;border-color:transparent!important;}
