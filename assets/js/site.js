@@ -115,40 +115,107 @@
   imageDialog.addEventListener('click',e=>{if(e.target===imageDialog)imageDialog.close()});
   document.addEventListener('keydown',e=>{if(imageDialog.open&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();changeImage(e.key==='ArrowRight'?1:-1)}});
 
-  // Homepage BACKGROUND video: autoplay muted once; no loop and no blocking modal.
-  // Leave the last frame visible when the 10-second clip ends.
-  const backgroundVideo=$('heroBackgroundVideo');
-  const audioToggle=$('backgroundAudioToggle');
-  const videoStatus=$('backgroundVideoStatus');
-  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-  backgroundVideo.loop=false;
-  backgroundVideo.muted=true; // Browser autoplay policy requires muted audio.
-  backgroundVideo.defaultMuted=true;
-  let userRequestedPlayback=false;
-  function updateVideoStatus(message){videoStatus.textContent=message;}
-  function playBackgroundVideo(restart=false){
-    if(restart){backgroundVideo.currentTime=0;window.scrollTo({top:0,behavior:reducedMotion.matches?'auto':'smooth'});}
-    if(reducedMotion.matches&&!userRequestedPlayback){updateVideoStatus('Background animation disabled · Replay if desired');return;}
-    const attempt=backgroundVideo.play();
-    if(attempt?.catch)attempt.catch(()=>updateVideoStatus('Video is ready · Use Replay to start'));
+  // Background introduction: never loop; request audible autoplay only when permitted.
+  // Browser policy decides whether automatic playback may have sound. If denied,
+  // continue a muted preview and make one-click playback with sound unmistakable.
+  const backgroundVideo = $('heroBackgroundVideo');
+  const audioToggle = $('backgroundAudioToggle');
+  const videoStatus = $('backgroundVideoStatus');
+  const launchButton = $('watchWelcome');
+  const hero = $('home');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  backgroundVideo.loop = false;
+  backgroundVideo.volume = 1;
+  backgroundVideo.muted = false;
+  backgroundVideo.defaultMuted = false;
+  let userManuallyMuted = false;
+  let playRequestId = 0;
+
+  function status(message) { videoStatus.textContent = message; }
+  function updateVideoButtons() {
+    const needsSound = backgroundVideo.muted;
+    launchButton.textContent = needsSound ? '▶ Play welcome with sound' : '↻ Replay welcome';
+    launchButton.setAttribute('aria-label', needsSound ? 'Play the welcome video from the beginning with sound' : 'Replay the welcome video from the beginning');
+    launchButton.classList.toggle('needs-sound', needsSound);
+    audioToggle.textContent = needsSound ? '▶ Play with sound' : '♫ Mute sound';
+    audioToggle.setAttribute('aria-label', needsSound ? 'Play welcome video from beginning with sound' : 'Mute background video');
+    audioToggle.setAttribute('aria-pressed', String(!needsSound));
+    audioToggle.classList.toggle('sound-cta', needsSound);
   }
-  backgroundVideo.addEventListener('ended',()=>{
-    backgroundVideo.pause(); // Do NOT set currentTime=0; retain the final frame.
-    updateVideoStatus('Finished · Will not repeat automatically');
+
+  // Called only directly by a user click: this is what unlocks audio in browsers.
+  function playWelcomeWithSound() {
+    ++playRequestId; // Ignore late responses from any initial autoplay attempt.
+    userManuallyMuted = false;
+    hero.classList.add('allow-motion');
+    backgroundVideo.pause();
+    backgroundVideo.currentTime = 0;
+    backgroundVideo.muted = false;
+    backgroundVideo.defaultMuted = false;
+    updateVideoButtons();
+    status('Starting welcome with sound…');
+    try {
+      const promise = backgroundVideo.play();
+      if (promise && typeof promise.then === 'function') {
+        promise.then(() => status('Playing with sound · Once only'))
+          .catch(() => status('Sound blocked by browser settings · Check site sound permission'));
+      } else { status('Playing with sound · Once only'); }
+    } catch (_) { status('Cannot start video · Check browser permissions'); }
+  }
+
+  async function autoplayOnce() {
+    if (reducedMotion.matches) {
+      status('Motion reduced by your preferences · Choose Play welcome with sound');
+      updateVideoButtons();
+      return;
+    }
+    const request = ++playRequestId;
+    try {
+      await backgroundVideo.play();
+      if (playRequestId === request) status('Playing with sound · Once only');
+    } catch (error) {
+      if (playRequestId !== request) return; // Visitor already clicked Play.
+      if (error && error.name === 'NotAllowedError') {
+        // Most first-time visitors are not allowed audible autoplay.
+        backgroundVideo.muted = true;
+        backgroundVideo.defaultMuted = true;
+        updateVideoButtons();
+        try {
+          await backgroundVideo.play();
+          if (playRequestId === request) status('Muted preview · Click Play welcome with sound to hear it');
+        } catch (_) {
+          if (playRequestId === request) status('Click Play welcome with sound to start');
+        }
+      } else {
+        status('Video unavailable · Confirm welcome.mp4 is uploaded');
+      }
+    }
+  }
+
+  backgroundVideo.addEventListener('ended', () => {
+    backgroundVideo.pause(); // Keep final frame visible; no automatic restart.
+    status(backgroundVideo.muted ? 'Finished · Replay with sound anytime' : 'Finished · Replay anytime');
+    updateVideoButtons();
   });
-  backgroundVideo.addEventListener('error',()=>updateVideoStatus('Background image shown · Video unavailable'));
-  function replayVideo(){userRequestedPlayback=true;document.querySelector('.hero-video-layout').classList.add('allow-motion');updateVideoStatus('Playing once · No loop');playBackgroundVideo(true);}
-  $('watchWelcome').addEventListener('click',replayVideo);
-  $('footerWelcome').addEventListener('click',replayVideo);
-  audioToggle.addEventListener('click',()=>{
-    backgroundVideo.muted=!backgroundVideo.muted;
-    audioToggle.textContent=backgroundVideo.muted?'♫ Enable sound':'♪ Mute sound';
-    audioToggle.setAttribute('aria-label',backgroundVideo.muted?'Enable background video sound':'Mute background video sound');
-    audioToggle.setAttribute('aria-pressed',String(!backgroundVideo.muted));
-    // If playback already ended, selecting sound alone does not unexpectedly restart the clip.
+  backgroundVideo.addEventListener('error', () => status('Video unavailable · Check welcome.mp4 path'));
+  backgroundVideo.addEventListener('volumechange', updateVideoButtons);
+  launchButton.addEventListener('click', playWelcomeWithSound);
+  $('footerWelcome').addEventListener('click', playWelcomeWithSound);
+  audioToggle.addEventListener('click', () => {
+    if (backgroundVideo.muted) {
+      // Real, direct click gesture: play with sound from frame one.
+      playWelcomeWithSound();
+    } else {
+      ++playRequestId;
+      userManuallyMuted = true;
+      backgroundVideo.muted = true;
+      backgroundVideo.defaultMuted = true;
+      updateVideoButtons();
+      status(backgroundVideo.ended ? 'Finished · Replay with sound anytime' : 'Sound off · Click Play welcome with sound to restart');
+    }
   });
-  if(!reducedMotion.matches)playBackgroundVideo();
-  else updateVideoStatus('Background animation disabled · Replay if desired');
+  updateVideoButtons();
+  autoplayOnce();
 
   // Appearance preference; accessible mobile navigation.
   let theme='dark';try{theme=localStorage.getItem('nv-color-theme')||'dark'}catch(_){}
