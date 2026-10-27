@@ -94,7 +94,7 @@
   function filterProjects(){let visible=0;const q=$('projectSearch').value.trim().toLowerCase();projectCards.forEach(card=>{const match=(projectFilter==='all'||card.dataset.group===projectFilter)&&(!q||(card.textContent+' '+card.dataset.search).toLowerCase().includes(q));card.hidden=!match;if(match)visible++});$('emptyProjects').hidden=visible>0;}
   document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{projectFilter=btn.dataset.filter;document.querySelectorAll('.filter').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});filterProjects()}));
   $('projectSearch').addEventListener('input',filterProjects);
-  document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName)&&$('intro').hidden){e.preventDefault();$('projectSearch').focus()}});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName)){e.preventDefault();$('projectSearch').focus()}});
 
   // Modal case studies and actual screenshot lightbox.
   const caseDialog=$('caseDialog'),imageDialog=$('imageDialog');let modalImageId=selected;let caseId='engicore';
@@ -115,21 +115,40 @@
   imageDialog.addEventListener('click',e=>{if(e.target===imageDialog)imageDialog.close()});
   document.addEventListener('keydown',e=>{if(imageDialog.open&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();changeImage(e.key==='ArrowRight'?1:-1)}});
 
-  // Welcome video uses original media (no additional overlays). Autoplay starts muted by browser requirements.
-  const intro=$('intro'),video=$('introVideo'),introError=$('introError');let lastFocused=null;
-  function closeIntro(){intro.hidden=true;document.body.classList.remove('intro-open');video.pause();try{sessionStorage.setItem('nv-seen-welcome','yes')}catch(_){}if(lastFocused&&document.contains(lastFocused))lastFocused.focus();}
-  function openIntro(){lastFocused=document.activeElement;intro.hidden=false;document.body.classList.add('intro-open');introError.hidden=true;video.currentTime=0;intro.focus();const play=video.play();if(play?.catch)play.catch(()=>{introError.hidden=false});}
-  function safePlay(){introError.hidden=true;const p=video.play();if(p?.catch)p.catch(()=>{introError.hidden=false});}
-  $('introClose').addEventListener('click',closeIntro);$('skipIntro').addEventListener('click',closeIntro);$('enterSite').addEventListener('click',closeIntro);
-  ['watchWelcome','footerWelcome'].forEach(id=>$(id).addEventListener('click',openIntro));
-  $('retryVideo').addEventListener('click',safePlay);
-  $('toggleAudio').addEventListener('click',()=>{video.muted=!video.muted;$('toggleAudio').textContent=video.muted?'♫ Enable sound':'♫ Mute';$('introHint').textContent=video.muted?'Sound is off.':'Sound is on.';safePlay()});
-  video.addEventListener('timeupdate',()=>{$('videoProgress').style.width=(video.duration?Math.min(100,100*video.currentTime/video.duration):0)+'%'});
-  video.addEventListener('ended',closeIntro);video.addEventListener('error',()=>{introError.hidden=false});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!intro.hidden)closeIntro()});
-  let seen=false;try{seen=sessionStorage.getItem('nv-seen-welcome')==='yes'}catch(_){}
-  if(seen){intro.hidden=true;document.body.classList.remove('intro-open');video.pause();}
-  else{openIntro();}
+  // Homepage BACKGROUND video: autoplay muted once; no loop and no blocking modal.
+  // Leave the last frame visible when the 10-second clip ends.
+  const backgroundVideo=$('heroBackgroundVideo');
+  const audioToggle=$('backgroundAudioToggle');
+  const videoStatus=$('backgroundVideoStatus');
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  backgroundVideo.loop=false;
+  backgroundVideo.muted=true; // Browser autoplay policy requires muted audio.
+  backgroundVideo.defaultMuted=true;
+  let userRequestedPlayback=false;
+  function updateVideoStatus(message){videoStatus.textContent=message;}
+  function playBackgroundVideo(restart=false){
+    if(restart){backgroundVideo.currentTime=0;window.scrollTo({top:0,behavior:reducedMotion.matches?'auto':'smooth'});}
+    if(reducedMotion.matches&&!userRequestedPlayback){updateVideoStatus('Background animation disabled · Replay if desired');return;}
+    const attempt=backgroundVideo.play();
+    if(attempt?.catch)attempt.catch(()=>updateVideoStatus('Video is ready · Use Replay to start'));
+  }
+  backgroundVideo.addEventListener('ended',()=>{
+    backgroundVideo.pause(); // Do NOT set currentTime=0; retain the final frame.
+    updateVideoStatus('Finished · Will not repeat automatically');
+  });
+  backgroundVideo.addEventListener('error',()=>updateVideoStatus('Background image shown · Video unavailable'));
+  function replayVideo(){userRequestedPlayback=true;document.querySelector('.hero-video-layout').classList.add('allow-motion');updateVideoStatus('Playing once · No loop');playBackgroundVideo(true);}
+  $('watchWelcome').addEventListener('click',replayVideo);
+  $('footerWelcome').addEventListener('click',replayVideo);
+  audioToggle.addEventListener('click',()=>{
+    backgroundVideo.muted=!backgroundVideo.muted;
+    audioToggle.textContent=backgroundVideo.muted?'♫ Enable sound':'♪ Mute sound';
+    audioToggle.setAttribute('aria-label',backgroundVideo.muted?'Enable background video sound':'Mute background video sound');
+    audioToggle.setAttribute('aria-pressed',String(!backgroundVideo.muted));
+    // If playback already ended, selecting sound alone does not unexpectedly restart the clip.
+  });
+  if(!reducedMotion.matches)playBackgroundVideo();
+  else updateVideoStatus('Background animation disabled · Replay if desired');
 
   // Appearance preference; accessible mobile navigation.
   let theme='dark';try{theme=localStorage.getItem('nv-color-theme')||'dark'}catch(_){}
