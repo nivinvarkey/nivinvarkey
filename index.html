@@ -37,9 +37,9 @@
 
   <main id="main">
     <section id="home" class="hero section-hero hero-video-layout" aria-label="Nivin Varkey welcome and introduction">
-      <!-- The ORIGINAL welcome.mp4 runs ONCE in the hero background. No looping, captions or timed text overlays. -->
+      <!-- The ORIGINAL welcome.mp4 runs ONCE in the hero background. Try sound first, fall back if autoplay policies block it. -->
       <div class="hero-background-media" aria-hidden="true">
-        <video id="heroBackgroundVideo" muted playsinline preload="metadata" poster="assets/images/welcome-poster.webp" disablepictureinpicture disableremoteplayback>
+        <video id="heroBackgroundVideo" playsinline preload="metadata" poster="assets/images/welcome-poster.webp" disablepictureinpicture disableremoteplayback>
           <source src="welcome.mp4" type="video/mp4">
         </video>
       </div>
@@ -54,8 +54,8 @@
         </div>
       </div>
       <div class="hero-video-controls shell">
-        <span class="hero-video-note" id="backgroundVideoStatus" role="status" aria-live="polite">Video plays once · Muted by default</span>
-        <button class="hero-audio-button" id="backgroundAudioToggle" type="button" aria-pressed="false" aria-label="Enable background video sound">♫ Enable sound</button>
+        <span class="hero-video-note" id="backgroundVideoStatus" role="status" aria-live="polite">Video plays once · Sound requested</span>
+        <button class="hero-audio-button" id="backgroundAudioToggle" type="button" aria-pressed="true" aria-label="Mute background video sound">♪ Mute sound</button>
       </div>
       <div class="shell hero-divider"><span>SCROLL TO EXPLORE</span><span class="line"></span><span class="arrow">↓</span></div>
     </section>
