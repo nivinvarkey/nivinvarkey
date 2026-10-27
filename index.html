@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/images/portrait.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=6">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8H32CX1J"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-YC8H32CX1J');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nivin Varkey","url":"https://nivin.professionals-cv.in/","jobTitle":"Piping Engineering Professional","address":{"@type":"PostalAddress","addressLocality":"Abu Dhabi","addressCountry":"AE"},"sameAs":["https://github.com/nivinvarkey","https://www.linkedin.com/in/nivinvarkey/"]}</script>
@@ -37,7 +37,7 @@
 
   <main id="main">
     <section id="home" class="hero section-hero hero-video-layout" aria-label="Nivin Varkey welcome and introduction">
-      <!-- The ORIGINAL welcome.mp4 runs ONCE in the hero background. Try sound first, fall back if autoplay policies block it. -->
+      <!-- Original 10-second video; plays once in the homepage background. Audible autoplay is requested when permitted; one-click playback with sound is available when blocked. -->
       <div class="hero-background-media" aria-hidden="true">
         <video id="heroBackgroundVideo" playsinline preload="metadata" poster="assets/images/welcome-poster.webp" disablepictureinpicture disableremoteplayback>
           <source src="welcome.mp4" type="video/mp4">
@@ -49,13 +49,13 @@
           <div class="eyebrow"><span class="eyebrow-line"></span> ENGINEERING ROOTS. DIGITAL MINDSET.</div>
           <h1>Building better<br><span class="highlight">engineering</span><br>workflows<span class="period">.</span></h1>
           <p class="hero-lead">I'm <strong>Nivin Varkey</strong> — a piping engineering professional who turns complex fabrication, documentation and project-data challenges into practical, dependable digital tools.</p>
-          <div class="hero-actions"><a class="button primary" href="#applications">Explore my applications <span>↗</span></a><button class="button hero-replay" id="watchWelcome" type="button" aria-label="Replay background video once">↻ Replay video</button></div>
+          <div class="hero-actions"><a class="button primary" href="#applications">Explore my applications <span>↗</span></a><button class="button hero-replay hero-listen" id="watchWelcome" type="button" aria-label="Play the welcome video with sound">▶ Play welcome with sound</button></div>
           <div class="hero-footer"><span><i class="indicator"></i> Based in Abu Dhabi, UAE</span><span>Engineering <em>+</em> Software Development</span></div>
         </div>
       </div>
       <div class="hero-video-controls shell">
-        <span class="hero-video-note" id="backgroundVideoStatus" role="status" aria-live="polite">Video plays once · Sound requested</span>
-        <button class="hero-audio-button" id="backgroundAudioToggle" type="button" aria-pressed="true" aria-label="Mute background video sound">♪ Mute sound</button>
+        <span class="hero-video-note" id="backgroundVideoStatus" role="status" aria-live="polite">Background video · plays once</span>
+        <button class="hero-audio-button" id="backgroundAudioToggle" type="button" aria-pressed="false" aria-label="Play background video with sound">▶ Sound on</button>
       </div>
       <div class="shell hero-divider"><span>SCROLL TO EXPLORE</span><span class="line"></span><span class="arrow">↓</span></div>
     </section>
@@ -110,6 +110,6 @@
 
   <dialog class="modal" id="caseDialog" aria-labelledby="caseTitle"><div class="modal-wrap"><button type="button" class="modal-close" id="closeCase" aria-label="Close project details">✕</button><div class="modal-meta" id="caseCategory">ENGINEERING TOOL</div><h2 id="caseTitle">Project</h2><p class="modal-intro" id="caseIntro"></p><div class="case-body"><div><h3>What it solves</h3><p id="caseProblem"></p></div><div><h3>Key capabilities</h3><ul id="caseBullets"></ul></div></div><div class="modal-tech" id="caseTech"></div><div class="modal-footer"><button class="button outline" type="button" id="caseCloseBottom">Close overview</button><button class="button primary" type="button" id="caseToPreview">View screenshot ↗</button></div></div></dialog>
   <dialog class="image-modal" id="imageDialog" aria-label="Enlarged application screenshot"><div class="image-modal-box"><div class="image-modal-toolbar"><strong id="imageModalTitle">Application screenshot</strong><div><button type="button" id="previousImage" title="Previous application" aria-label="Previous application">←</button><button type="button" id="nextImage" title="Next application" aria-label="Next application">→</button><button type="button" id="closeImage" title="Close image" aria-label="Close image">✕</button></div></div><img id="modalImage" alt="Enlarged application screenshot"><p>Actual application screenshot · Use arrow keys to browse or Esc to close.</p></div></dialog>
-  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/site.js?v=6" defer></script>
 </body>
 </html>
