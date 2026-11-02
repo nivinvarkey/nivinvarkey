@@ -1,32 +1,42 @@
-# Nivin Varkey — Advanced Engineering Portfolio
+# Nivin Varkey — Engineering Portfolio Redesign
 
-An entirely static, GitHub Pages-ready professional website with a premium responsive design and real application screenshots.
+A modern, responsive, GitHub Pages-compatible professional portfolio built from the user-supplied website archive. Entirely static HTML, CSS, JavaScript and local assets. No npm, backend or build process is needed.
 
-## What has changed
+## Included features
 
-- Kept the **original** `welcome.mp4` (16:9, approximately 10 seconds) **without any text overlays**. It now runs **once behind the hero section**, with no opening popup and no looping.
-- Added a professional homepage and enhanced application showcase with clickable tabs for five engineering applications.
-- Integrated five screenshots supplied by the owner, compressed for web use. **Internal workstation/network path fields visible in two original screenshots have been blurred in the website copies**.
-- Added a searchable/filterable project gallery, detailed case-study popups and full-screen screenshot previews with keyboard navigation.
-- Added career progression, engineering capabilities, experience, EPC project exposure, skills, education and contact sections.
-- Includes a light/dark mode toggle, responsive navigation, scroll progress, reduced-motion support, accessible controls and a one-time non-looping background welcome video with replay and mute controls.
-- Preserved the custom domain in `CNAME`, original professional portrait and CV PDF.
-- Retained the supplied GA4 ID `G-YC8H32CX1J` (confirm this ID is correct for this website; it may currently point to another property's data stream).
+- Redesigned engineering-focused homepage with the supplied professional photograph, animated hero elements and a restrained industrial colour palette.
+- Interactive animated piping spool fabrication sequence showing **isometric review → cutting & fit-up → welding → inspection & release**, including stage selection and Play / Pause controls. This is an illustrated demonstration, not recorded fabrication footage.
+- Dedicated `/tools/` catalogue with working search and category filters.
+- **Nine individual tool case-study pages**: EngiCore, Checker’s Tool, Spool Support Sync, DWG Batch Editor, Multiple Spool Merger, Support DPR, Ship-Loose BOM & PDF Generator, Spool Drawing Maker, Engineering Workflow Automations.
+- Real screenshots of the five applications supplied in the source archive; other pages use clearly indicated non-screenshot technical graphics.
+- Honest status labels that distinguish applications from tools still in development.
+- Professional expertise, engineering career phases, academic background, selected EPC project environments, contact, LinkedIn, GitHub and downloadable original CV.
+- Original `welcome.mp4` retained as a user-controlled, **non-looping** introduction video. Browser policies may require an explicit click before playing sound.
+- Responsive mobile menu, scroll reveal animations, SVG fabrication animation, hover animations, accessible labels and reduced-motion support.
+- Retained `CNAME` custom domain, Google Analytics measurement ID `G-YC8H32CX1J`, CV and existing personal assets. Includes `sitemap.xml` and `robots.txt`.
 
-## Upload to GitHub Pages
+## Deploy to GitHub Pages
 
-1. Extract the ZIP.
-2. Upload **the contents** (not a folder containing them) to the root of your GitHub Pages repository.
-3. Keep all `assets` subfolders and all the filenames unchanged.
-4. Confirm **Settings → Pages** points to the right branch and `/root` directory.
-5. Visit https://nivin.professionals-cv.in/ and hard refresh if needed.
+1. Extract the ZIP archive.
+2. Upload all files **inside** the extracted folder to the root of the repository serving `nivin.professionals-cv.in`. Existing files with the same names must be replaced.
+3. Keep `CNAME`, `index.html`, `tools/`, `assets/`, `Nivin_Varkey_Project_Engineer_CV.pdf`, `welcome.mp4` and the other files together in their original relative structure.
+4. In GitHub repository Settings → Pages, configure deployment from the correct branch and root directory (`/`).
+5. Open `https://nivin.professionals-cv.in/` and refresh the browser cache.
 
-No build step, Node modules, framework runtime, backend or administrator rights are needed.
+## Edit content
 
-## Important technical notes
+- Homepage layout: `index.html`
+- Catalogue listing: `tools/index.html`
+- Case studies: `tools/<tool-slug>/index.html`
+- Responsive styling and animation design: `assets/css/site.css`
+- Interactions: `assets/js/site.js`
+- Original screenshots: `assets/images/*.webp`
+- A structured index of case studies: `tools-data.json` (informational export). HTML pages are pre-generated and do not fetch this JSON at runtime.
 
-- The original `welcome.mp4` plays **once in the homepage hero background** on each page load (not on loop). The video ends on its last frame and stays in the background. It never blocks website navigation. Replay buttons are in the hero and footer. Autoplay begins muted for browser compatibility; sound can be enabled manually. Reduced-motion preferences show the video poster unless the user initiates playback.
-- Video and screenshots are stored locally with the website; external services are only used for Google Fonts, Google Analytics and outbound external links.
-- The site does not claim that all tools are available as public downloads, and it does not publish private code, JDE data or credentials.
-- Screenshot overlays were **not added**. The video contains no newly added text overlays. Ordinary homepage text is positioned in the foreground for usability, and is not edited or timed into the video.
-- Source edit locations: `index.html`, `assets/css/site.css` and `assets/js/site.js`. Application case-study descriptions and images are declared in the `applications` object at the top of the JavaScript file.
+## Privacy and publication
+
+This is a **portfolio showcase**, not a download page for proprietary company applications. It does not embed private JDE data, network paths or database credentials. Screenshots are copies from the uploaded source archive, in which sensitive workstation paths had already been obscured. Verify all screenshots and claims before making the site public.
+
+## Validation performed
+
+Browsed renderings in headless Chromium using locally inlined static assets (direct browser navigation in the test environment was blocked). Checked script execution, individual fabrication stage controls, Play / Pause behaviour, catalogue search and filtering, case-study markup, mobile menu and mobile horizontal-overflow on the homepage.

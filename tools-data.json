@@ -1,0 +1,283 @@
+[
+  {
+    "slug": "engicore",
+    "name": "EngiCore",
+    "kind": "Engineering platform",
+    "eyebrow": "ENGINEERING DESKTOP SUITE",
+    "status": "Application",
+    "category": "desktop",
+    "image": "engicore.webp",
+    "index": "01",
+    "short": "A unified workspace for the engineering tasks that cannot afford fragmented workflows.",
+    "lead": "EngiCore brings project file operations, document utilities and repeatable engineering tasks into one familiar Windows environment.",
+    "problem": "Engineering teams frequently switch among folders, spreadsheets and small utilities to manage the same project information. That fragmentation makes simple tasks hard to repeat consistently.",
+    "features": [
+      "Job-oriented file management and structured project utilities",
+      "DWG, PDF, material-code and barcode related workflows",
+      "Reporting, naming and document-organization helpers",
+      "Practical Windows interface for repeatable everyday tasks"
+    ],
+    "stack": [
+      "Python",
+      "PySide6",
+      "Windows",
+      "Excel / PDF"
+    ],
+    "results": [
+      "Fewer context switches between day-to-day engineering utilities",
+      "Repeatable processes instead of manual folder operations",
+      "Project-focused workflows built for real users"
+    ],
+    "accent": "#83d9ef"
+  },
+  {
+    "slug": "checkers-tool",
+    "name": "Checker’s Tool",
+    "kind": "Spool checking",
+    "eyebrow": "QUALITY & DOCUMENT CONTROL",
+    "status": "Application",
+    "category": "desktop",
+    "image": "checkers-tool.webp",
+    "index": "02",
+    "short": "One checking workspace for spool drawings, JDE references and project-specific rules.",
+    "lead": "A multi-job engineering checking application designed around spool visibility, source-data lookups, drawing retrieval and controlled checks.",
+    "problem": "Drawing checkers must reconcile spool numbers, source systems, ISO references, revisions and job-specific requirements while keeping their work traceable.",
+    "features": [
+      "Separate job modules with project-specific mappings and references",
+      "Spool, line, PDF, JDE and drawing lookup workflows",
+      "Checking status, priority, aging and spool monitoring",
+      "Administrative controls for job settings, notices and users"
+    ],
+    "stack": [
+      "Python",
+      "PySide6",
+      "Supabase",
+      "JDE",
+      "PDF indexing"
+    ],
+    "results": [
+      "Faster retrieval of related spool information",
+      "More consistent checking workflows across projects",
+      "Better visibility into outstanding engineering checks"
+    ],
+    "accent": "#f7b06b"
+  },
+  {
+    "slug": "spool-support-sync",
+    "name": "Spool Support Sync",
+    "kind": "PDF coordination",
+    "eyebrow": "FABRICATION DOCUMENTATION",
+    "status": "Application",
+    "category": "desktop",
+    "image": "support-sync.webp",
+    "index": "03",
+    "short": "Match the right spool with the right support information without repetitive PDF work.",
+    "lead": "A dedicated support coordination utility that aligns Excel support references with spool drawing packages and automates document assembly.",
+    "problem": "Spool and support documents may live in different locations. Manual attachment assembly can be slow and leaves room for omission.",
+    "features": [
+      "Spool identification and matching against support references",
+      "Excel-driven support reference management",
+      "Single-spool and batch PDF attachments and merging",
+      "Processing feedback, logs and user-friendly controls"
+    ],
+    "stack": [
+      "Python",
+      "PySide6",
+      "Excel",
+      "PDF"
+    ],
+    "results": [
+      "Less repeated PDF handling",
+      "Traceable matching of spool and support information",
+      "Consistent output for engineering release packages"
+    ],
+    "accent": "#7bd8bb"
+  },
+  {
+    "slug": "dwg-batch-editor",
+    "name": "DWG Batch Editor",
+    "kind": "CAD automation",
+    "eyebrow": "DRAWING AUTOMATION",
+    "status": "Application",
+    "category": "desktop",
+    "image": "dwg-editor.webp",
+    "index": "04",
+    "short": "Structured drawing updates, executed across batches rather than one file at a time.",
+    "lead": "An AutoCAD-oriented Windows utility for repeated drawing metadata changes across large sets of fabrication deliverables.",
+    "problem": "Changing title blocks, identifiers, revisions and associated data manually on many drawings takes time and increases inconsistent output.",
+    "features": [
+      "Read structured metadata and mappings from Excel",
+      "Batch replacement of drawing and spool identifiers",
+      "Revision, barcode, project and title-block data handling",
+      "DWG/PDF generation flows with execution logs"
+    ],
+    "stack": [
+      "Python",
+      "AutoCAD",
+      "Excel",
+      "LISP / SCR"
+    ],
+    "results": [
+      "Repeatable and auditable drawing edits",
+      "Reduced manual title-block corrections",
+      "Consistent batch output conventions"
+    ],
+    "accent": "#a9aff7"
+  },
+  {
+    "slug": "multiple-spool-merger",
+    "name": "Multiple Spool Merger",
+    "kind": "PDF automation",
+    "eyebrow": "DOCUMENT PACKAGE AUTOMATION",
+    "status": "Application",
+    "category": "desktop",
+    "image": "pdf-merger.webp",
+    "index": "05",
+    "short": "Turn scattered spool PDFs and suffix drawings into ordered, traceable packages.",
+    "lead": "An automated merger that recognizes spool identifiers, groups related drawing PDFs and processes document packages at scale.",
+    "problem": "Spool drawings frequently arrive as a base PDF plus lettered attachments. Manually combining them and identifying missing sheets is repetitive.",
+    "features": [
+      "Group PDFs by spool number and drawing suffix",
+      "Merge corresponding base and attachment pages in sequence",
+      "Batch folder processing with progress and exception feedback",
+      "Missing-attachment handling and output naming conventions"
+    ],
+    "stack": [
+      "Python",
+      "pypdf",
+      "Windows",
+      "Batch processing"
+    ],
+    "results": [
+      "Repeatable spool-package assembly",
+      "Clearer missing-file visibility",
+      "Less time spent collating PDF attachments"
+    ],
+    "accent": "#f7b06b"
+  },
+  {
+    "slug": "support-dpr",
+    "name": "Support DPR",
+    "kind": "Progress reporting",
+    "eyebrow": "ENGINEERING OPERATIONS",
+    "status": "Application",
+    "category": "automation",
+    "image": null,
+    "index": "06",
+    "short": "A structured daily progress workflow for assignments, checks and release reporting.",
+    "lead": "A daily progress reporting application focused on fabrication-support work, role-based handovers and transparent team activity.",
+    "problem": "Daily engineering progress can be fragmented between individual trackers, handover messages and manually consolidated reports.",
+    "features": [
+      "Assignment and progress tracking across checking stages",
+      "User and role-oriented work views",
+      "Daily, weekly and monthly reporting outputs",
+      "Configurable reporting sources and audit-friendly records"
+    ],
+    "stack": [
+      "Python",
+      "PySide6",
+      "Excel",
+      "Supabase"
+    ],
+    "results": [
+      "Clearer ownership and handover status",
+      "Reduced repeated consolidation work",
+      "Traceable progress reporting"
+    ],
+    "accent": "#83d9ef"
+  },
+  {
+    "slug": "shiploose-generator",
+    "name": "Ship-Loose BOM & PDF Generator",
+    "kind": "Fabrication documents",
+    "eyebrow": "TEMPLATE DRIVEN OUTPUT",
+    "status": "In development",
+    "category": "development",
+    "image": null,
+    "index": "07",
+    "short": "Generate coordinated ship-loose drawings and BOM workbooks from one structured input.",
+    "lead": "A template-driven ship-loose document generator being refined against real fabrication references.",
+    "problem": "Ship-loose sheets demand consistent identifiers, barcodes, title blocks, piecemarks and well-aligned tables. Rebuilding them manually invites formatting differences.",
+    "features": [
+      "Paired drawing PDF and BOM workbook output",
+      "Matching naming for drawing-to-BOM traceability",
+      "Barcode, piecemark and drawing metadata layout",
+      "Configurable project/customer settings and precise table alignment"
+    ],
+    "stack": [
+      "Python",
+      "PDF",
+      "Excel",
+      "Barcode"
+    ],
+    "results": [
+      "Consistent document templates",
+      "Reduced manual layout work",
+      "One-to-one naming between drawing and BOM"
+    ],
+    "accent": "#7bd8bb"
+  },
+  {
+    "slug": "spool-drawing-maker",
+    "name": "Spool Drawing Maker",
+    "kind": "Engineering design",
+    "eyebrow": "FABRICATION DRAWING CONCEPT",
+    "status": "In development",
+    "category": "development",
+    "image": null,
+    "index": "08",
+    "short": "A visual tool concept for creating fabrication-oriented spool drawings from engineering inputs.",
+    "lead": "An evolving engineering application focused on practical spool geometry, isometric conventions and fabrication-ready drawing output.",
+    "problem": "Preparing fabrication-style piping drawings requires accurate dimensions, component placement, correct elbow geometry and readable technical presentation.",
+    "features": [
+      "Spool layouts built from piping components and dimensions",
+      "Metric and imperial dimension handling",
+      "Fabrication drawing previews and document generation",
+      "Exploration of PCF and standard piping-component references"
+    ],
+    "stack": [
+      "Python",
+      "CAD concepts",
+      "PCF",
+      "PDF"
+    ],
+    "results": [
+      "More structured drawing creation",
+      "Engineering-consistent representations",
+      "Reusable geometry and drawing conventions"
+    ],
+    "accent": "#a9aff7"
+  },
+  {
+    "slug": "engineering-automations",
+    "name": "Engineering Workflow Automations",
+    "kind": "Data automation",
+    "eyebrow": "DATA & SYSTEMS ENGINEERING",
+    "status": "Automation portfolio",
+    "category": "automation",
+    "image": null,
+    "index": "09",
+    "short": "Targeted utilities for BOMs, joint data, job cards, SharePoint and reporting.",
+    "lead": "A growing collection of practical automations to remove repetitive steps across engineering data and document processes.",
+    "problem": "Engineering workflows often depend on extracts that must be compared, cleaned, merged, checked and distributed accurately.",
+    "features": [
+      "BOM and joint-data reconciliation with backups and change logs",
+      "Job-card extraction and Power Query transformations",
+      "Excel / VBA reporting and structured data preparation",
+      "Power Automate, SharePoint and source-system integrations"
+    ],
+    "stack": [
+      "Power Query",
+      "PowerShell",
+      "Excel / VBA",
+      "Python",
+      "SQL"
+    ],
+    "results": [
+      "Less manual reconciliation and copy-paste work",
+      "Repeatable transformations with traceability",
+      "Engineering-ready reporting outputs"
+    ],
+    "accent": "#f7b06b"
+  }
+]
