@@ -1,0 +1,1 @@
+Place the final Google Flow MP4 in this folder and name it spool-fabrication.mp4. The website detects it and switches automatically from SVG model playback to real footage. See the root README for chapter timecodes.
